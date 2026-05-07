@@ -58,15 +58,18 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .section-eyebrow{font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;text-align:center}
 .section-heading{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:2px;color:var(--navy);text-align:center;margin-bottom:0.75rem}
 .section-sub{font-size:0.95rem;color:var(--text2);text-align:center;max-width:480px;margin:0 auto 2.5rem}
-.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem}
-.cat-card{background:var(--off);border:1px solid var(--border);border-radius:10px;padding:1.5rem 1rem;text-align:center;text-decoration:none;transition:all 0.2s;display:flex;flex-direction:column;align-items:center;gap:0.75rem}
-.cat-card:hover{background:var(--navy);border-color:var(--navy);transform:translateY(-2px);box-shadow:0 6px 20px rgba(13,27,42,0.15)}
-.cat-icon{width:52px;height:52px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;transition:background 0.2s}
-.cat-card:hover .cat-icon{background:rgba(245,158,11,0.15)}
-.cat-name{font-size:0.85rem;font-weight:600;color:var(--text)}
-.cat-card:hover .cat-name{color:var(--white)}
-.cat-desc{font-size:0.75rem;color:var(--gray);line-height:1.4}
-.cat-card:hover .cat-desc{color:rgba(255,255,255,0.6)}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.cat-card{position:relative;border-radius:12px;overflow:hidden;text-decoration:none;height:160px;display:block;transition:transform 0.2s,box-shadow 0.2s}
+.cat-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(13,27,42,0.2)}
+.cat-card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.3s}
+.cat-card:hover .cat-card-img{transform:scale(1.05)}
+.cat-card-img-placeholder{width:100%;height:100%;background:var(--navy2);display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+.cat-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,42,0.92) 0%,rgba(13,27,42,0.4) 55%,rgba(13,27,42,0.1) 100%)}
+.cat-card-body{position:absolute;bottom:0;left:0;right:0;padding:1rem}
+.cat-name{font-size:0.9rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:0.2rem}
+.cat-desc{font-size:0.72rem;color:rgba(255,255,255,0.65)}
+.cat-card-arrow{position:absolute;top:12px;right:12px;width:28px;height:28px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--navy);font-weight:700;opacity:0;transition:opacity 0.2s}
+.cat-card:hover .cat-card-arrow{opacity:1}
 
 /* DIVIDER */
 .divider{height:1px;background:var(--border);max-width:1060px;margin:0 auto}
@@ -185,54 +188,104 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;ma
   <p class="section-sub">Every category reviewed and ranked. Click any category to see our top picks.</p>
   <div class="cat-grid">
     <a href="offensive-sticks.html" class="cat-card">
-      <div class="cat-icon">🥍</div>
-      <div class="cat-name">Offensive Sticks</div>
-      <div class="cat-desc">Attack &amp; midfield</div>
+      <img class="cat-card-img" src="images/cat-offensive-sticks.jpg" alt="Offensive Sticks" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cat-card-img-placeholder" style="display:none">🥍</div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-arrow">→</div>
+      <div class="cat-card-body">
+        <div class="cat-name">Offensive Sticks</div>
+        <div class="cat-desc">Attack & midfield</div>
+      </div>
     </a>
     <a href="defensive-sticks.html" class="cat-card">
-      <div class="cat-icon">🏒</div>
-      <div class="cat-name">Defensive Poles</div>
-      <div class="cat-desc">Defense &amp; LSM</div>
+      <img class="cat-card-img" src="images/cat-defensive-sticks.jpg" alt="Defensive Poles" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cat-card-img-placeholder" style="display:none">🥍</div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-arrow">→</div>
+      <div class="cat-card-body">
+        <div class="cat-name">Defensive Poles</div>
+        <div class="cat-desc">Defense & LSM</div>
+      </div>
     </a>
     <a href="girls-sticks.html" class="cat-card">
-      <div class="cat-icon">💜</div>
-      <div class="cat-name">Girls Sticks</div>
-      <div class="cat-desc">Women's &amp; girls</div>
+      <img class="cat-card-img" src="images/cat-girls-sticks.jpg" alt="Girls Sticks" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cat-card-img-placeholder" style="display:none">🥍</div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-arrow">→</div>
+      <div class="cat-card-body">
+        <div class="cat-name">Girls Sticks</div>
+        <div class="cat-desc">Women's & girls</div>
+      </div>
     </a>
     <a href="helmets.html" class="cat-card">
-      <div class="cat-icon">🪖</div>
-      <div class="cat-name">Helmets</div>
-      <div class="cat-desc">All levels</div>
+      <img class="cat-card-img" src="images/cat-helmets.jpg" alt="Helmets" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cat-card-img-placeholder" style="display:none">🥍</div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-arrow">→</div>
+      <div class="cat-card-body">
+        <div class="cat-name">Helmets</div>
+        <div class="cat-desc">All levels</div>
+      </div>
     </a>
     <a href="gloves.html" class="cat-card">
-      <div class="cat-icon">🧤</div>
-      <div class="cat-name">Gloves</div>
-      <div class="cat-desc">All positions</div>
+      <img class="cat-card-img" src="images/cat-gloves.jpg" alt="Gloves" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cat-card-img-placeholder" style="display:none">🥍</div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-arrow">→</div>
+      <div class="cat-card-body">
+        <div class="cat-name">Gloves</div>
+        <div class="cat-desc">All positions</div>
+      </div>
     </a>
     <a href="elbow-pads.html" class="cat-card">
-      <div class="cat-icon">💪</div>
-      <div class="cat-name">Elbow Pads</div>
-      <div class="cat-desc">Arm protection</div>
+      <img class="cat-card-img" src="images/cat-elbow-pads.jpg" alt="Elbow Pads" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cat-card-img-placeholder" style="display:none">🥍</div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-arrow">→</div>
+      <div class="cat-card-body">
+        <div class="cat-name">Elbow Pads</div>
+        <div class="cat-desc">Arm protection</div>
+      </div>
     </a>
     <a href="chest-protectors.html" class="cat-card">
-      <div class="cat-icon">🦺</div>
-      <div class="cat-name">Chest &amp; Shoulder</div>
-      <div class="cat-desc">Goalies &amp; field</div>
+      <img class="cat-card-img" src="images/cat-chest-shoulder.jpg" alt="Chest & Shoulder" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cat-card-img-placeholder" style="display:none">🥍</div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-arrow">→</div>
+      <div class="cat-card-body">
+        <div class="cat-name">Chest & Shoulder</div>
+        <div class="cat-desc">Goalies & field</div>
+      </div>
     </a>
     <a href="cleats.html" class="cat-card">
-      <div class="cat-icon">👟</div>
-      <div class="cat-name">Cleats</div>
-      <div class="cat-desc">Grass &amp; turf</div>
+      <img class="cat-card-img" src="images/cat-cleats.jpg" alt="Cleats" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cat-card-img-placeholder" style="display:none">🥍</div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-arrow">→</div>
+      <div class="cat-card-body">
+        <div class="cat-name">Cleats</div>
+        <div class="cat-desc">Grass & turf</div>
+      </div>
     </a>
     <a href="gear-bags.html" class="cat-card">
-      <div class="cat-icon">🎒</div>
-      <div class="cat-name">Gear Bags</div>
-      <div class="cat-desc">Carry everything</div>
+      <img class="cat-card-img" src="images/cat-gear-bags.jpg" alt="Gear Bags" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cat-card-img-placeholder" style="display:none">🥍</div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-arrow">→</div>
+      <div class="cat-card-body">
+        <div class="cat-name">Gear Bags</div>
+        <div class="cat-desc">Carry everything</div>
+      </div>
     </a>
     <a href="youth-equipment.html" class="cat-card">
-      <div class="cat-icon">⭐</div>
-      <div class="cat-name">Youth Equipment</div>
-      <div class="cat-desc">Ages 8–14</div>
+      <img class="cat-card-img" src="images/cat-youth.jpg" alt="Youth Equipment" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cat-card-img-placeholder" style="display:none">🥍</div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-arrow">→</div>
+      <div class="cat-card-body">
+        <div class="cat-name">Youth Equipment</div>
+        <div class="cat-desc">Ages 8–14</div>
+      </div>
     </a>
   </div>
 </section>
