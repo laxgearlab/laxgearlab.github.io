@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LaxGearLab – Unbiased lacrosse gear reviews, head-to-head comparisons, and expert picks for sticks, helmets, gloves, and more.">
+<title>LaxGearLab – Best Lacrosse Gear Reviews 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0a1628;--gold:#e8a020;--gold-light:#f5c842;--white:#ffffff;--off:#f7f5f0;--gray:#6b7280;--light:#e5e7eb;--green:#16a34a}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--navy)}
+nav{background:var(--navy);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:100}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--gold);letter-spacing:2px}
+.logo span{color:var(--white)}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.875rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--navy);padding:0.4rem 1rem;border-radius:4px;font-weight:600;font-size:0.875rem;text-decoration:none}
+.hero{background:var(--navy);padding:5rem 2rem 4rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;border:60px solid rgba(232,160,32,0.08)}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;border-radius:50%;border:80px solid rgba(232,160,32,0.05)}
+.hero-badge{display:inline-block;background:rgba(232,160,32,0.15);color:var(--gold);font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.25rem;border:1px solid rgba(232,160,32,0.3)}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,5.5rem);color:var(--white);line-height:0.95;letter-spacing:3px;margin-bottom:1.25rem}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p{color:rgba(255,255,255,0.65);font-size:1.05rem;max-width:520px;margin:0 auto 2rem;line-height:1.7}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--navy);padding:0.75rem 2rem;border-radius:4px;font-weight:600;font-size:0.95rem;text-decoration:none}
+.btn-outline{border:1px solid rgba(255,255,255,0.3);color:var(--white);padding:0.75rem 2rem;border-radius:4px;font-weight:500;font-size:0.95rem;text-decoration:none}
+.trust-bar{background:var(--off);border-bottom:1px solid var(--light);padding:0.875rem 2rem;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;font-weight:500;color:var(--gray)}
+.trust-dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.section{padding:4rem 2rem;max-width:1100px;margin:0 auto}
+.section-label{font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:2px;color:var(--navy);margin-bottom:0.5rem}
+.section-sub{color:var(--gray);font-size:0.95rem;max-width:500px;line-height:1.6;margin-bottom:2.5rem}
+.picks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.pick-card{border:1px solid var(--light);border-radius:8px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s}
+.pick-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.1);transform:translateY(-2px)}
+.pick-img{background:var(--off);height:180px;display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative}
+.pick-badge{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:0.2rem 0.6rem;border-radius:2px}
+.pick-badge.best{background:var(--navy);color:var(--gold)}
+.pick-body{padding:1.25rem}
+.pick-cat{font-size:0.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.35rem}
+.pick-name{font-weight:600;font-size:1.05rem;color:var(--navy);margin-bottom:0.35rem;line-height:1.3}
+.pick-desc{font-size:0.85rem;color:var(--gray);line-height:1.5;margin-bottom:1rem}
+.pick-footer{display:flex;align-items:center;justify-content:space-between}
+.pick-price{font-size:1.1rem;font-weight:600;color:var(--navy)}
+.pick-stars{color:var(--gold);font-size:0.8rem}
+.pick-btn{background:var(--navy);color:var(--white);padding:0.45rem 1rem;border-radius:4px;font-size:0.8rem;font-weight:600;text-decoration:none}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+.cat-card{background:var(--off);border-radius:8px;padding:1.5rem 1rem;text-align:center;text-decoration:none;transition:background 0.2s}
+.cat-card:hover{background:var(--navy)}
+.cat-icon{font-size:1.75rem;width:52px;height:52px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem}
+.cat-name{font-size:0.85rem;font-weight:600;color:var(--navy)}
+.cat-card:hover .cat-name{color:var(--white)}
+.divider{height:1px;background:var(--light);max-width:1100px;margin:0 auto}
+.newsletter{background:var(--navy);border-radius:12px;padding:3rem 2rem;text-align:center;margin:2rem 0}
+.newsletter h3{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--white);letter-spacing:2px;margin-bottom:0.5rem}
+.newsletter p{color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:1.5rem}
+.email-row{display:flex;gap:0.75rem;max-width:400px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.email-row input{flex:1;min-width:200px;padding:0.7rem 1rem;border-radius:4px;border:none;font-size:0.9rem;font-family:'DM Sans',sans-serif}
+.email-row button{background:var(--gold);color:var(--navy);padding:0.7rem 1.5rem;border-radius:4px;border:none;font-weight:700;font-size:0.875rem;cursor:pointer}
+footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:2rem;font-size:0.8rem;line-height:1.8}
+footer a{color:rgba(255,255,255,0.5);text-decoration:none}
+footer a:hover{color:var(--gold)}
+.footer-note{font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:0.5rem}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Lax<span>Gear</span>Lab</div>
+  <ul class="nav-links">
+    <li><a href="best-beginner-sticks.html">Sticks</a></li>
+    <li><a href="best-lacrosse-helmets.html">Helmets</a></li>
+    <li><a href="best-lacrosse-gloves.html">Gloves</a></li>
+    <li><a href="best-lacrosse-cleats.html">Cleats</a></li>
+  </ul>
+  <a href="best-picks.html" class="nav-cta">Best Picks</a>
+</nav>
+<section class="hero">
+  <div class="hero-badge">⚡ Expert Gear Reviews for Every Level</div>
+  <h1>Find Your <em>Perfect</em><br>Lacrosse Gear</h1>
+  <p>Unbiased reviews, head-to-head comparisons, and expert picks for sticks, helmets, gloves, and more — so you can play your best game.</p>
+  <div class="hero-btns">
+    <a href="best-beginner-sticks.html" class="btn-primary">See Top Picks →</a>
+    <a href="#categories" class="btn-outline">Browse by Category</a>
+  </div>
+</section>
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-dot"></div>200+ Gear Reviews</div>
+  <div class="trust-item"><div class="trust-dot"></div>Updated Weekly</div>
+  <div class="trust-item"><div class="trust-dot"></div>Player-Tested</div>
+  <div class="trust-item"><div class="trust-dot"></div>All Skill Levels</div>
+  <div class="trust-item"><div class="trust-dot"></div>No Paid Placements</div>
+</div>
+<div class="section">
+  <div class="section-label">Editor's Picks</div>
+  <div class="section-title">Top Gear Right Now</div>
+  <p class="section-sub">Hand-picked by our team based on performance, durability, and value. Updated monthly.</p>
+  <div class="picks-grid">
+    <div class="pick-card">
+      <div class="pick-img">🥍<div class="pick-badge best">Best Overall</div></div>
+      <div class="pick-body">
+        <div class="pick-cat">Attack Stick</div>
+        <div class="pick-name">StringKing Complete 2 Senior</div>
+        <div class="pick-desc">The most complete ready-to-play stick on the market. Excellent for attackers at any level.</div>
+        <div class="pick-footer">
+          <div><div class="pick-stars">★★★★★</div><div class="pick-price">$139.99</div></div>
+          <a href="https://www.amazon.com/dp/B07THLZX3G?tag=laxgearlab-20" class="pick-btn" target="_blank">View on Amazon</a>
+        </div>
+      </div>
+    </div>
+    <div class="pick-card">
+      <div class="pick-img">🪖<div class="pick-badge">Best Value</div></div>
+      <div class="pick-body">
+        <div class="pick-cat">Helmet</div>
+        <div class="pick-name">Cascade XRS Pro</div>
+        <div class="pick-desc">Premium protection with an aggressive fit. The go-to helmet for serious players.</div>
+        <div class="pick-footer">
+          <div><div class="pick-stars">★★★★★</div><div class="pick-price">$299.99</div></div>
+          <a href="https://www.amazon.com/s?k=cascade+xrs+pro+lacrosse+helmet&tag=laxgearlab-20" class="pick-btn" target="_blank">View on Amazon</a>
+        </div>
+      </div>
+    </div>
+    <div class="pick-card">
+      <div class="pick-img">🧤<div class="pick-badge">Top Rated</div></div>
+      <div class="pick-body">
+        <div class="pick-cat">Gloves</div>
+        <div class="pick-name">Maverik Rome NXT</div>
+        <div class="pick-desc">Exceptional feel and protection. Loved by midfielders for their flexibility and grip.</div>
+        <div class="pick-footer">
+          <div><div class="pick-stars">★★★★½</div><div class="pick-price">$89.99</div></div>
+          <a href="https://www.amazon.com/s?k=maverik+rome+nxt+lacrosse+gloves&tag=laxgearlab-20" class="pick-btn" target="_blank">View on Amazon</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+<div class="section" id="categories">
+  <div class="section-label">Browse by Category</div>
+  <div class="section-title">Shop the Full Range</div>
+  <p class="section-sub">Every category reviewed and ranked. Find the best gear for your position and budget.</p>
+  <div class="cat-grid">
+    <a href="best-beginner-sticks.html" class="cat-card"><div class="cat-icon">🥍</div><div class="cat-name">Attack Sticks</div></a>
+    <a href="best-beginner-sticks.html" class="cat-card"><div class="cat-icon">🏒</div><div class="cat-name">Defense Poles</div></a>
+    <a href="best-lacrosse-chest-protectors.html" class="cat-card"><div class="cat-icon">🥅</div><div class="cat-name">Goalie Gear</div></a>
+    <a href="best-lacrosse-helmets.html" class="cat-card"><div class="cat-icon">🪖</div><div class="cat-name">Helmets</div></a>
+    <a href="best-lacrosse-gloves.html" class="cat-card"><div class="cat-icon">🧤</div><div class="cat-name">Gloves</div></a>
+    <a href="best-lacrosse-cleats.html" class="cat-card"><div class="cat-icon">👟</div><div class="cat-name">Cleats</div></a>
+    <a href="best-lacrosse-elbow-pads.html" class="cat-card"><div class="cat-icon">🦺</div><div class="cat-name">Pads</div></a>
+    <a href="best-picks.html" class="cat-card"><div class="cat-icon">🎒</div><div class="cat-name">Best Picks</div></a>
+  </div>
+</div>
+<div class="section" style="padding-top:0">
+  <div class="newsletter">
+    <h3>Get the Best Deals First</h3>
+    <p>Weekly gear roundups, discount alerts, and new review notifications. No spam.</p>
+    <div class="email-row">
+      <input type="email" placeholder="your@email.com">
+      <button>Subscribe</button>
+    </div>
+  </div>
+</div>
+<footer>
+  <div style="margin-bottom:0.5rem"><span style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:#e8a020">Lax<span style="color:white">Gear</span>Lab</span></div>
+  <div><a href="privacy.html">Privacy</a> · <a href="affiliate-disclosure.html">Affiliate Disclosure</a> · <a href="#">Contact</a> · <a href="#">About</a></div>
+  <div class="footer-note">LaxGearLab is a participant in the Amazon Services LLC Associates Program. We earn a small commission on purchases made through our links at no extra cost to you.</div>
+</footer>
+</body>
+</html>
