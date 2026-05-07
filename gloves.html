@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The best lacrosse gloves for every position and budget. Tested for protection, feel, grip, and durability.">
+<title>Best Lacrosse Gloves 2025 – LaxGearLab</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0d1b2a;
+  --navy2:#1a2f47;
+  --white:#ffffff;
+  --off:#f8fafc;
+  --border:#e2e8f0;
+  --gray:#64748b;
+  --text:#0f172a;
+  --text2:#475569;
+  --gold:#f59e0b;
+  --gold2:#d97706;
+  --green:#16a34a;
+  --red:#dc2626;
+}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);font-size:16px;line-height:1.7}
+
+/* ── NAV ── */
+nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;position:sticky;top:0;z-index:200}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:var(--white);text-decoration:none;letter-spacing:2px}
+.logo em{color:var(--gold);font-style:normal}
+.nav-main{display:flex;align-items:center;gap:0.25rem;list-style:none}
+.nav-main>li{position:relative}
+.nav-main>li>a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.825rem;font-weight:500;padding:0.5rem 0.875rem;border-radius:4px;display:flex;align-items:center;gap:0.25rem;transition:background 0.15s}
+.nav-main>li>a:hover,.nav-main>li:hover>a{background:rgba(255,255,255,0.08);color:var(--white)}
+.dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:8px;min-width:190px;box-shadow:0 8px 24px rgba(0,0,0,0.12);list-style:none;overflow:hidden;z-index:300}
+.nav-main>li:hover .dropdown{display:block}
+.dropdown a{display:block;padding:0.65rem 1.1rem;font-size:0.825rem;color:var(--text);text-decoration:none;font-weight:500;transition:background 0.1s}
+.dropdown a:hover{background:var(--off);color:var(--navy)}
+.dropdown li+li a{border-top:1px solid var(--border)}
+.nav-cta{background:var(--gold);color:var(--navy);padding:0.45rem 1.1rem;border-radius:5px;font-weight:700;font-size:0.825rem;text-decoration:none;transition:background 0.15s;white-space:nowrap}
+.nav-cta:hover{background:var(--gold2)}
+
+/* ── BREADCRUMB ── */
+.breadcrumb{padding:0.75rem 2rem;background:var(--off);border-bottom:1px solid var(--border);font-size:0.75rem;color:var(--gray)}
+.breadcrumb a{color:var(--navy);text-decoration:none;font-weight:500}
+.breadcrumb a:hover{text-decoration:underline}
+
+/* ── PAGE WRAP ── */
+.page-wrap{max-width:1060px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+
+/* ── PAGE HEADER ── */
+.page-header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:2px solid var(--border)}
+.page-eyebrow{font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem}
+.page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:2px;color:var(--navy);line-height:1;margin-bottom:0.75rem}
+.page-desc{font-size:1rem;color:var(--text2);max-width:620px;line-height:1.7}
+
+/* ── DISCLOSURE ── */
+.disclosure{background:var(--off);border:1px solid var(--border);border-radius:6px;padding:0.875rem 1.25rem;font-size:0.775rem;color:var(--gray);margin-bottom:2rem;line-height:1.6}
+.disclosure strong{color:var(--text)}
+
+/* ── IMAGE SLOT ── */
+.img-slot{position:relative;cursor:pointer;background:#f1f5f9;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.img-slot img{width:100%;height:100%;object-fit:contain;padding:1rem;display:block}
+.img-slot.empty img{display:none}
+.img-placeholder{display:none;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;padding:1.5rem;text-align:center;position:absolute;inset:0}
+.img-slot.empty .img-placeholder{display:flex}
+.img-slot:not(.empty):hover .img-hover{display:flex}
+.img-hover{display:none;position:absolute;inset:0;background:rgba(0,0,0,0.45);flex-direction:column;align-items:center;justify-content:center;gap:0.35rem}
+.img-hover span{color:var(--white);font-size:0.8rem;font-weight:600}
+.img-icon{font-size:2rem;line-height:1}
+.img-filename{font-size:0.7rem;font-weight:600;color:var(--navy);font-family:monospace;background:rgba(13,27,42,0.08);padding:0.2rem 0.5rem;border-radius:3px}
+.img-hint{font-size:0.65rem;color:var(--gray)}
+.img-slot input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+
+/* ── FEATURED CARD ── */
+.featured-card{border:2px solid var(--navy);border-radius:12px;overflow:hidden;margin-bottom:3rem}
+.featured-label{background:var(--navy);color:var(--white);padding:0.6rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;justify-content:space-between}
+.featured-label .badge{background:var(--gold);color:var(--navy);padding:0.15rem 0.6rem;border-radius:3px;font-size:0.65rem}
+.featured-body{display:grid;grid-template-columns:340px 1fr;gap:0}
+@media(max-width:700px){.featured-body{grid-template-columns:1fr}}
+.featured-img{background:var(--off)}
+.featured-img .img-slot{height:280px;border-radius:0}
+.featured-info{padding:1.75rem 2rem;display:flex;flex-direction:column;gap:1rem}
+.featured-name{font-family:'Bebas Neue',sans-serif;font-size:1.75rem;letter-spacing:1.5px;color:var(--navy);line-height:1.1}
+.featured-rating{display:flex;align-items:center;gap:0.75rem}
+.stars{color:var(--gold);font-size:0.95rem;letter-spacing:1px}
+.rating-text{font-size:0.825rem;color:var(--gray)}
+.featured-price{font-size:2rem;font-weight:800;color:var(--navy)}
+.featured-summary{font-size:0.925rem;color:var(--text2);line-height:1.7}
+.featured-specs{display:flex;flex-wrap:wrap;gap:0.4rem}
+.spec-pill{background:var(--off);border:1px solid var(--border);border-radius:4px;padding:0.25rem 0.75rem;font-size:0.75rem;color:var(--text2)}
+.spec-pill strong{color:var(--text);font-weight:600}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+.pros-box,.cons-box{background:var(--off);border-radius:6px;padding:0.875rem 1rem}
+.pc-title{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
+.pros-box .pc-title{color:var(--green)}
+.cons-box .pc-title{color:var(--red)}
+.pc-list{list-style:none;font-size:0.825rem;color:var(--text2)}
+.pc-list li{padding:0.2rem 0 0.2rem 1.1rem;position:relative}
+.pc-list li::before{position:absolute;left:0;font-size:0.75rem;font-weight:700}
+.pros-box .pc-list li::before{content:'✓';color:var(--green)}
+.cons-box .pc-list li::before{content:'✗';color:var(--red)}
+.buy-btn{display:block;background:var(--navy);color:var(--white);text-align:center;padding:0.875rem 1.5rem;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background 0.15s}
+.buy-btn:hover{background:var(--navy2)}
+.buy-note{text-align:center;font-size:0.7rem;color:var(--gray);margin-top:0.4rem}
+
+/* ── SECTION TITLE ── */
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;color:var(--navy);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem}
+.section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ── ALT GRID ── */
+.alt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem;margin-bottom:3rem}
+.alt-card{border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;display:flex;flex-direction:column}
+.alt-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.08);transform:translateY(-2px)}
+.alt-img .img-slot{height:160px;border-radius:0}
+.alt-body{padding:1.1rem;flex:1;display:flex;flex-direction:column;gap:0.5rem}
+.alt-award{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)}
+.alt-name{font-weight:700;font-size:0.95rem;color:var(--navy);line-height:1.3}
+.alt-desc{font-size:0.825rem;color:var(--text2);line-height:1.5;flex:1}
+.alt-footer{display:flex;align-items:center;justify-content:space-between;margin-top:0.5rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+.alt-price{font-size:1.1rem;font-weight:800;color:var(--navy)}
+.alt-btn{background:var(--off);border:1px solid var(--border);color:var(--navy);padding:0.4rem 0.875rem;border-radius:4px;font-size:0.775rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:background 0.15s}
+.alt-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.alt-stars{color:var(--gold);font-size:0.75rem}
+
+/* ── BUYING GUIDE ── */
+.guide-section{background:var(--off);border-radius:10px;padding:2rem;margin-bottom:2.5rem}
+.guide-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1.5px;color:var(--navy);margin-bottom:1rem}
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.guide-item{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1rem}
+.guide-item-title{font-size:0.8rem;font-weight:700;color:var(--navy);margin-bottom:0.35rem}
+.guide-item-text{font-size:0.8rem;color:var(--text2);line-height:1.5}
+
+/* ── FAQ ── */
+.faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0}
+.faq-q{font-weight:600;font-size:0.95rem;color:var(--navy);margin-bottom:0.4rem}
+.faq-a{font-size:0.875rem;color:var(--text2);line-height:1.7}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;margin-top:0}
+.footer-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);letter-spacing:2px;margin-bottom:0.5rem}
+.footer-logo em{color:var(--gold);font-style:normal}
+.footer-tagline{font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.5}
+.footer-links{display:flex;flex-direction:column;gap:0.35rem;text-align:right}
+.footer-links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{max-width:1060px;margin:1.5rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);font-size:0.72rem;color:rgba(255,255,255,0.25);line-height:1.6}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Lax<em>Gear</em>Lab</a>
+  <ul class="nav-main">
+    <li class="has-dropdown">
+      <a href="#">Sticks ▾</a>
+      <ul class="dropdown">
+        <li><a href="offensive-sticks.html">Offensive Sticks</a></li>
+        <li><a href="defensive-sticks.html">Defensive Sticks</a></li>
+        <li><a href="girls-sticks.html">Girls Sticks</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <a href="#">Protection ▾</a>
+      <ul class="dropdown">
+        <li><a href="helmets.html">Helmets</a></li>
+        <li><a href="gloves.html">Gloves</a></li>
+        <li><a href="elbow-pads.html">Elbow Pads</a></li>
+        <li><a href="chest-protectors.html">Chest &amp; Shoulder</a></li>
+      </ul>
+    </li>
+    <li><a href="cleats.html">Cleats</a></li>
+    <li><a href="gear-bags.html">Bags</a></li>
+    <li><a href="youth-equipment.html">Youth</a></li>
+  </ul>
+  <a href="index.html#chat" class="nav-cta">Find My Gear</a>
+</nav>
+<div class="breadcrumb"><a href="index.html">Home</a> › Gloves</div>
+<div class="page-wrap">
+  <div class="disclosure"><strong>Affiliate Disclosure:</strong> LaxGearLab earns a commission on purchases made through our Amazon links at no extra cost to you. Reviews are always independent.</div>
+  <div class="page-header">
+    <div class="page-eyebrow">Hand Protection</div>
+    <div class="page-title">Best Lacrosse Gloves 2025</div>
+    <div class="page-desc">The best lacrosse gloves for every position and budget. Tested for protection, feel, grip, and durability.</div>
+  </div>
+  <div class="featured-card">
+  <div class="featured-label">
+    <span>⭐ TOP PICK</span>
+    <span class="badge">Best Overall</span>
+  </div>
+  <div class="featured-body">
+    <div class="featured-img"><div class="img-slot empty" style="height:280px" title="Click to preview — upload as images/maverik-rome-nxt.jpg to GitHub">
+  <img src="images/maverik-rome-nxt.jpg" alt="Maverik Rome NXT" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">maverik-rome-nxt.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/maverik-rome-nxt.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div></div>
+    <div class="featured-info">
+      <div class="featured-name">Maverik Rome NXT</div>
+      <div class="featured-rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-text">4.8/5 &nbsp;·&nbsp; 940 reviews</span>
+      </div>
+      <div class="featured-price">$89.99</div>
+      <div class="featured-summary">The Maverik Rome NXT strikes the perfect balance between protection and stick feel. The single-piece palm gives you natural grip and the foam padding handles checks without killing dexterity. Durable through a full season and available in multiple sizes. The top choice for attack and midfield players at any level.</div>
+      <div class="featured-specs"><div class="spec-pill"><strong>Palm:</strong> Single-piece</div><div class="spec-pill"><strong>Best for:</strong> Attack/Midfield</div><div class="spec-pill"><strong>Sizes:</strong> S/M/L/XL</div><div class="spec-pill"><strong>Cuff:</strong> Standard</div></div>
+      <div class="pros-cons">
+        <div class="pros-box"><div class="pc-title">Pros</div><ul class="pc-list"><li>Perfect protection-to-mobility ratio</li><li>Single-piece palm for grip</li><li>Durable all season</li><li>Clean minimal look</li></ul></div>
+        <div class="cons-box"><div class="pc-title">Cons</div><ul class="pc-list"><li>Runs slightly small — size up</li><li>Pricier than budget options</li></ul></div>
+      </div>
+      <a href="https://www.amazon.com/s?k=Maverik+Rome+NXT+lacrosse+gloves&tag=laxgearlab-20" class="buy-btn" target="_blank">→ Check Price on Amazon</a>
+      <div class="buy-note">Free Prime shipping available</div>
+    </div>
+  </div>
+</div>
+  <div class="section-title">4 More Great Options</div>
+  <div class="alt-grid"><div class="alt-card">
+  <div class="alt-img"><div class="img-slot empty" style="height:160px" title="Click to preview — upload as images/stx-surgeon-rzr.jpg to GitHub">
+  <img src="images/stx-surgeon-rzr.jpg" alt="STX Surgeon RZR" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">stx-surgeon-rzr.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/stx-surgeon-rzr.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div></div>
+  <div class="alt-body">
+    <div class="alt-award">🤌 Best Feel</div>
+    <div class="alt-name">STX Surgeon RZR</div>
+    <div class="alt-stars">★★★★☆</div>
+    <div class="alt-desc">Ultra-thin palm for maximum stick feel. Short cuff for full wrist mobility. Built for dodgers and shooters who need every bit of control.</div>
+    <div class="alt-footer">
+      <div class="alt-price">$69.99</div>
+      <a href="https://www.amazon.com/s?k=STX+Surgeon+RZR+lacrosse+gloves&tag=laxgearlab-20" class="alt-btn" target="_blank">Amazon →</a>
+    </div>
+  </div>
+</div><div class="alt-card">
+  <div class="alt-img"><div class="img-slot empty" style="height:160px" title="Click to preview — upload as images/warrior-burn-gloves.jpg to GitHub">
+  <img src="images/warrior-burn-gloves.jpg" alt="Warrior Burn Next" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">warrior-burn-gloves.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/warrior-burn-gloves.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div></div>
+  <div class="alt-body">
+    <div class="alt-award">💰 Best Budget</div>
+    <div class="alt-name">Warrior Burn Next</div>
+    <div class="alt-stars">★★★★☆</div>
+    <div class="alt-desc">Solid protection and a durable palm at a price that makes sense for first-year players. Gets the job done through a full season.</div>
+    <div class="alt-footer">
+      <div class="alt-price">$44.99</div>
+      <a href="https://www.amazon.com/s?k=Warrior+Burn+Next+lacrosse+gloves&tag=laxgearlab-20" class="alt-btn" target="_blank">Amazon →</a>
+    </div>
+  </div>
+</div><div class="alt-card">
+  <div class="alt-img"><div class="img-slot empty" style="height:160px" title="Click to preview — upload as images/stx-cell-6-gloves.jpg to GitHub">
+  <img src="images/stx-cell-6-gloves.jpg" alt="STX Cell 6 Glove" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">stx-cell-6-gloves.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/stx-cell-6-gloves.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div></div>
+  <div class="alt-body">
+    <div class="alt-award">🛡️ Best Defense</div>
+    <div class="alt-name">STX Cell 6 Glove</div>
+    <div class="alt-stars">★★★★☆</div>
+    <div class="alt-desc">Extra-thick backhand padding and a reinforced cuff built for defenders who take constant stick checks. Maximum protection without bulk.</div>
+    <div class="alt-footer">
+      <div class="alt-price">$79.99</div>
+      <a href="https://www.amazon.com/s?k=STX+Cell+6+lacrosse+gloves&tag=laxgearlab-20" class="alt-btn" target="_blank">Amazon →</a>
+    </div>
+  </div>
+</div><div class="alt-card">
+  <div class="alt-img"><div class="img-slot empty" style="height:160px" title="Click to preview — upload as images/stx-stallion-youth-gloves.jpg to GitHub">
+  <img src="images/stx-stallion-youth-gloves.jpg" alt="STX Stallion 50 Youth" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">stx-stallion-youth-gloves.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/stx-stallion-youth-gloves.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div></div>
+  <div class="alt-body">
+    <div class="alt-award">👦 Best Youth</div>
+    <div class="alt-name">STX Stallion 50 Youth</div>
+    <div class="alt-stars">★★★★☆</div>
+    <div class="alt-desc">Perfectly sized for smaller hands with the same quality materials as the adult STX line. Great value for youth players.</div>
+    <div class="alt-footer">
+      <div class="alt-price">$34.99</div>
+      <a href="https://www.amazon.com/s?k=STX+Stallion+50+youth+lacrosse+gloves&tag=laxgearlab-20" class="alt-btn" target="_blank">Amazon →</a>
+    </div>
+  </div>
+</div></div>
+  <div class="guide-section">
+    <div class="guide-title">Buying Guide</div>
+    <div class="guide-grid"><div class="guide-item"><div class="guide-item-title">Sizing</div><div class="guide-item-text">Measure from your palm base to your middle fingertip. Match to the size chart. When between sizes go larger.</div></div><div class="guide-item"><div class="guide-item-title">Palm Thickness</div><div class="guide-item-text">Thinner palms give better stick feel for attackers. Thicker palms give better protection for defenders and midfielders who take checks.</div></div><div class="guide-item"><div class="guide-item-title">Cuff Length</div><div class="guide-item-text">Short cuffs give better wrist mobility. Standard or long cuffs give better protection. Position matters here.</div></div><div class="guide-item"><div class="guide-item-title">Break-in Period</div><div class="guide-item-text">All gloves need 1–2 practices to break in. The foam softens and molds to your hand. Do not judge fit until after break-in.</div></div></div>
+  </div>
+  <div class="section-title">Frequently Asked Questions</div>
+  <div class="faq-item"><div class="faq-q">How do I find my size?</div><div class="faq-a">Measure palm base to middle fingertip in inches. Match to the glove size chart.</div></div><div class="faq-item"><div class="faq-q">How long do lacrosse gloves last?</div><div class="faq-a">1–2 seasons with regular use before the palm wears thin. Store dry to extend life.</div></div><div class="faq-item"><div class="faq-q">What is the difference between attack and defense gloves?</div><div class="faq-a">Attack gloves prioritize thin palms and short cuffs. Defense gloves prioritize thick backhand padding and longer cuffs.</div></div><div class="faq-item"><div class="faq-q">Can I machine wash lacrosse gloves?</div><div class="faq-a">Hand wash in cold water and air dry. Machine washing breaks down foam padding prematurely.</div></div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Lax<em>Gear</em>Lab</div>
+      <div class="footer-tagline">Helping players find the right lacrosse gear<br>since 2025. No paid placements. Ever.</div>
+    </div>
+    <div class="footer-links">
+      <a href="offensive-sticks.html">Offensive Sticks</a>
+      <a href="defensive-sticks.html">Defensive Sticks</a>
+      <a href="girls-sticks.html">Girls Sticks</a>
+      <a href="helmets.html">Helmets</a>
+      <a href="gloves.html">Gloves</a>
+      <a href="elbow-pads.html">Elbow Pads</a>
+      <a href="chest-protectors.html">Chest &amp; Shoulder</a>
+      <a href="cleats.html">Cleats</a>
+      <a href="gear-bags.html">Gear Bags</a>
+      <a href="youth-equipment.html">Youth</a>
+      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+    </div>
+  </div>
+  <div class="footer-bottom">LaxGearLab is a participant in the Amazon Services LLC Associates Program. We earn a small commission on purchases made through our links at no extra cost to you. All recommendations are independent and unsponsored.</div>
+</footer>
+<script>
+function previewImg(input) {
+  if (!input.files || !input.files[0]) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const slot = input.closest('.img-slot');
+    let img = slot.querySelector('img');
+    img.src = e.target.result;
+    img.style.display = 'block';
+    slot.classList.remove('empty');
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+</script>
+</body>
+</html>
