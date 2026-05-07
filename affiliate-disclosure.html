@@ -30,5 +30,29 @@ footer a:hover{color:var(--gold)}
   <p>We only recommend products we genuinely believe are good options for lacrosse players. Our goal is to make your shopping experience as easy and informed as possible.</p>
 </div>
 <footer><a href="index.html">← Back to LaxGearLab</a></footer>
+<script>
+// Dropdown click handler
+document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var li = this.parentElement;
+    var isActive = li.classList.contains('active');
+    // Close all dropdowns
+    document.querySelectorAll('.nav-main > li').forEach(function(el) {
+      el.classList.remove('active');
+    });
+    // Toggle clicked one
+    if (!isActive) li.classList.add('active');
+  });
+});
+// Close when clicking outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-main')) {
+    document.querySelectorAll('.nav-main > li').forEach(function(el) {
+      el.classList.remove('active');
+    });
+  }
+});
+</script>
 </body>
 </html>

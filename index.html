@@ -24,7 +24,7 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .nav-main>li>a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.825rem;font-weight:500;padding:0.5rem 0.875rem;border-radius:4px;display:flex;align-items:center;gap:0.25rem;transition:background 0.15s}
 .nav-main>li>a:hover,.nav-main>li:hover>a{background:rgba(255,255,255,0.08);color:var(--white)}
 .dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:8px;min-width:190px;box-shadow:0 8px 24px rgba(0,0,0,0.12);list-style:none;overflow:hidden;z-index:300}
-.nav-main>li:hover .dropdown{display:block}
+/* click-based dropdown - see JS below */
 .dropdown a{display:block;padding:0.65rem 1.1rem;font-size:0.825rem;color:var(--text);text-decoration:none;font-weight:500}
 .dropdown a:hover{background:var(--off)}
 .dropdown li+li a{border-top:1px solid var(--border)}
@@ -435,5 +435,29 @@ Be concise and friendly. Ask clarifying questions if needed (position, age, budg
 }
 </script>
 
+<script>
+// Dropdown click handler
+document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var li = this.parentElement;
+    var isActive = li.classList.contains('active');
+    // Close all dropdowns
+    document.querySelectorAll('.nav-main > li').forEach(function(el) {
+      el.classList.remove('active');
+    });
+    // Toggle clicked one
+    if (!isActive) li.classList.add('active');
+  });
+});
+// Close when clicking outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-main')) {
+    document.querySelectorAll('.nav-main > li').forEach(function(el) {
+      el.classList.remove('active');
+    });
+  }
+});
+</script>
 </body>
 </html>
