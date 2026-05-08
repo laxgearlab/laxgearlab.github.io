@@ -8,23 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0d1b2a;
-  --navy2:#1a2f47;
-  --white:#ffffff;
-  --off:#f8fafc;
-  --border:#e2e8f0;
-  --gray:#64748b;
-  --text:#0f172a;
-  --text2:#475569;
-  --gold:#f59e0b;
-  --gold2:#d97706;
-  --green:#16a34a;
-  --red:#dc2626;
-}
+:root{--navy:#0d1b2a;--navy2:#1a2f47;--white:#ffffff;--off:#f8fafc;--border:#e2e8f0;--gray:#64748b;--text:#0f172a;--text2:#475569;--gold:#f59e0b;--gold2:#d97706;--green:#16a34a;--red:#dc2626;}
 body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);font-size:16px;line-height:1.7}
-
-/* ── NAV ── */
 nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;position:sticky;top:0;z-index:200}
 .logo{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:var(--white);text-decoration:none;letter-spacing:2px}
 .logo em{color:var(--gold);font-style:normal}
@@ -35,32 +20,21 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .nav-main>li.open>a{background:rgba(255,255,255,0.08);color:var(--white)}
 .nav-main>li.open .dropdown{display:block}
 .dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:8px;min-width:190px;box-shadow:0 8px 24px rgba(0,0,0,0.12);list-style:none;overflow:hidden;z-index:300}
-/* click-based dropdown - see JS below */
 .dropdown a{display:block;padding:0.65rem 1.1rem;font-size:0.825rem;color:var(--text);text-decoration:none;font-weight:500;transition:background 0.1s}
 .dropdown a:hover{background:var(--off);color:var(--navy)}
 .dropdown li+li a{border-top:1px solid var(--border)}
 .nav-cta{background:var(--gold);color:var(--navy);padding:0.45rem 1.1rem;border-radius:5px;font-weight:700;font-size:0.825rem;text-decoration:none;transition:background 0.15s;white-space:nowrap}
 .nav-cta:hover{background:var(--gold2)}
-
-/* ── BREADCRUMB ── */
 .breadcrumb{padding:0.75rem 2rem;background:var(--off);border-bottom:1px solid var(--border);font-size:0.75rem;color:var(--gray)}
 .breadcrumb a{color:var(--navy);text-decoration:none;font-weight:500}
 .breadcrumb a:hover{text-decoration:underline}
-
-/* ── PAGE WRAP ── */
 .page-wrap{max-width:1060px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
-
-/* ── PAGE HEADER ── */
 .page-header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:2px solid var(--border)}
 .page-eyebrow{font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem}
 .page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:2px;color:var(--navy);line-height:1;margin-bottom:0.75rem}
 .page-desc{font-size:1rem;color:var(--text2);max-width:620px;line-height:1.7}
-
-/* ── DISCLOSURE ── */
 .disclosure{background:var(--off);border:1px solid var(--border);border-radius:6px;padding:0.875rem 1.25rem;font-size:0.775rem;color:var(--gray);margin-bottom:2rem;line-height:1.6}
 .disclosure strong{color:var(--text)}
-
-/* ── IMAGE SLOT ── */
 .img-slot{position:relative;cursor:pointer;background:#f1f5f9;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .img-slot img{width:100%;height:100%;object-fit:contain;padding:1rem;display:block}
 .img-slot.empty img{display:none}
@@ -73,8 +47,6 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .img-filename{font-size:0.7rem;font-weight:600;color:var(--navy);font-family:monospace;background:rgba(13,27,42,0.08);padding:0.2rem 0.5rem;border-radius:3px}
 .img-hint{font-size:0.65rem;color:var(--gray)}
 .img-slot input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-
-/* ── FEATURED CARD ── */
 .featured-card{border:2px solid var(--navy);border-radius:12px;overflow:hidden;margin-bottom:3rem}
 .featured-label{background:var(--navy);color:var(--white);padding:0.6rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;justify-content:space-between}
 .featured-label .badge{background:var(--gold);color:var(--navy);padding:0.15rem 0.6rem;border-radius:3px;font-size:0.65rem}
@@ -105,12 +77,8 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .buy-btn{display:block;background:var(--navy);color:var(--white);text-align:center;padding:0.875rem 1.5rem;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background 0.15s}
 .buy-btn:hover{background:var(--navy2)}
 .buy-note{text-align:center;font-size:0.7rem;color:var(--gray);margin-top:0.4rem}
-
-/* ── SECTION TITLE ── */
 .section-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;color:var(--navy);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem}
 .section-title::after{content:'';flex:1;height:1px;background:var(--border)}
-
-/* ── ALT GRID ── */
 .alt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem;margin-bottom:3rem}
 .alt-card{border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;display:flex;flex-direction:column}
 .alt-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.08);transform:translateY(-2px)}
@@ -124,21 +92,15 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .alt-btn{background:var(--off);border:1px solid var(--border);color:var(--navy);padding:0.4rem 0.875rem;border-radius:4px;font-size:0.775rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:background 0.15s}
 .alt-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
 .alt-stars{color:var(--gold);font-size:0.75rem}
-
-/* ── BUYING GUIDE ── */
 .guide-section{background:var(--off);border-radius:10px;padding:2rem;margin-bottom:2.5rem}
 .guide-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1.5px;color:var(--navy);margin-bottom:1rem}
 .guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
 .guide-item{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1rem}
 .guide-item-title{font-size:0.8rem;font-weight:700;color:var(--navy);margin-bottom:0.35rem}
 .guide-item-text{font-size:0.8rem;color:var(--text2);line-height:1.5}
-
-/* ── FAQ ── */
 .faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0}
 .faq-q{font-weight:600;font-size:0.95rem;color:var(--navy);margin-bottom:0.4rem}
 .faq-a{font-size:0.875rem;color:var(--text2);line-height:1.7}
-
-/* ── FOOTER ── */
 footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;margin-top:0}
 .footer-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start}
 .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);letter-spacing:2px;margin-bottom:0.5rem}
@@ -177,141 +139,171 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;ma
   </ul>
   <a href="index.html#chat" class="nav-cta">Find My Gear</a>
 </nav>
+
 <div class="breadcrumb"><a href="index.html">Home</a> › Elbow Pads</div>
+
 <div class="page-wrap">
   <div class="disclosure"><strong>Affiliate Disclosure:</strong> LaxGearLab earns a commission on purchases made through our Amazon links at no extra cost to you. Reviews are always independent.</div>
+
   <div class="page-header">
     <div class="page-eyebrow">Arm Protection</div>
     <div class="page-title">Best Lacrosse Elbow Pads 2026</div>
     <div class="page-desc">The best lacrosse elbow pads for every position. Tested for protection, fit, and freedom of movement.</div>
   </div>
+
+  <!-- FEATURED -->
   <div class="featured-card">
-  <div class="featured-label">
-    <span>⭐ TOP PICK</span>
-    <span class="badge">Best Overall</span>
-  </div>
-  <div class="featured-body">
-    <div class="featured-img"><div class="img-slot" style="height:280px" title="Click to preview — upload as images/stx-cell-6-arms.jpg to GitHub">
-  <img src="images/stx-cell-6-arms.jpg" alt="STX Cell 6 Arm Pads" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
-  <div class="img-placeholder">
-    <div class="img-icon">📷</div>
-    <div class="img-filename">stx-cell-6-arms.jpg</div>
-    <div class="img-hint">Upload to GitHub as images/stx-cell-6-arms.jpg</div>
-  </div>
-  <div class="img-hover"><span>📷 Change Image</span></div>
-  <input type="file" accept="image/*" onchange="previewImg(this)">
-</div></div>
-    <div class="featured-info">
-      <div class="featured-name">STX Cell 6 Arm Pads</div>
-      <div class="featured-rating">
-        <span class="stars">★★★★★</span>
-        <span class="rating-text">4.7/5 &nbsp;·&nbsp; 580 reviews</span>
+    <div class="featured-label">
+      <span>⭐ TOP PICK</span>
+      <span class="badge">Best Overall</span>
+    </div>
+    <div class="featured-body">
+      <div class="featured-img">
+        <div class="img-slot" style="height:280px">
+          <img src="images/stx-cell-6-arms.jpg" alt="STX Cell 6 Arm Pads" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+          <div class="img-placeholder"><div class="img-icon">📷</div><div class="img-filename">stx-cell-6-arms.jpg</div><div class="img-hint">Upload to GitHub as images/stx-cell-6-arms.jpg</div></div>
+          <div class="img-hover"><span>📷 Change Image</span></div>
+          <input type="file" accept="image/*" onchange="previewImg(this)">
+        </div>
       </div>
-      <div class="featured-price">$114.99</div>
-      <div class="featured-summary">The STX Cell 6 arm pads offer top-tier protection with a fit so comfortable you will forget you are wearing them. The segmented foam contours naturally to your arm and stays in place through the most intense play. The hardened elbow cap absorbs stick checks without bruising and the ventilation channels keep you comfortable all game.</div>
-      <div class="featured-specs"><div class="spec-pill"><strong>Cap:</strong> Hard plastic</div><div class="spec-pill"><strong>Fit:</strong> Compression sleeve</div><div class="spec-pill"><strong>Sizes:</strong> S/M/L/XL</div><div class="spec-pill"><strong>Best for:</strong> All positions</div></div>
-      <div class="pros-cons">
-        <div class="pros-box"><div class="pc-title">Pros</div><ul class="pc-list"><li>Segmented foam moves with arm</li><li>Hardened elbow cap</li><li>Stays in place all game</li><li>Well ventilated</li></ul></div>
-        <div class="cons-box"><div class="pc-title">Cons</div><ul class="pc-list"><li>Pricier than entry-level</li><li>Bulkier than minimalist pads</li></ul></div>
+      <div class="featured-info">
+        <div class="featured-name">STX Cell 6 Arm Pads</div>
+        <div class="featured-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">4.7/5 &nbsp;·&nbsp; 580 reviews</span>
+        </div>
+        <div class="featured-price">$114.99</div>
+        <div class="featured-summary">The STX Cell 6 arm pads offer top-tier protection with a fit so comfortable you will forget you are wearing them. The segmented foam contours naturally to your arm and stays in place through the most intense play. The hardened elbow cap absorbs stick checks without bruising and the ventilation channels keep you comfortable all game.</div>
+        <div class="featured-specs">
+          <div class="spec-pill"><strong>Cap:</strong> Hard plastic</div>
+          <div class="spec-pill"><strong>Fit:</strong> Compression sleeve</div>
+          <div class="spec-pill"><strong>Sizes:</strong> S/M/L/XL</div>
+          <div class="spec-pill"><strong>Best for:</strong> All positions</div>
+        </div>
+        <div class="pros-cons">
+          <div class="pros-box"><div class="pc-title">Pros</div><ul class="pc-list"><li>Segmented foam moves with arm</li><li>Hardened elbow cap</li><li>Stays in place all game</li><li>Well ventilated</li></ul></div>
+          <div class="cons-box"><div class="pc-title">Cons</div><ul class="pc-list"><li>Pricier than entry-level</li><li>Bulkier than minimalist pads</li></ul></div>
+        </div>
+        <a href="https://amzn.to/4dfxDsm" class="buy-btn" target="_blank">→ Check Price on Amazon</a>
+        <div class="buy-note">Free Prime shipping available</div>
       </div>
-      <a href="https://amzn.to/4dfxDsm" class="alt-btn" target="_blank">→ Check Price on Amazon</a>
-      <div class="buy-note">Free Prime shipping available</div>
     </div>
   </div>
-</div>
+
+  <!-- 4 ALTERNATIVES -->
   <div class="section-title">4 More Great Options</div>
-  <div class="alt-grid"><div class="alt-card">
-  <div class="alt-img"><div class="img-slot" style="height:160px" title="Click to preview — upload as images/maverik-mx-arms.jpg to GitHub">
-  <img src="images/maverik-mx-arms.jpg" alt="Maverik MX Arm Pads" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
-  <div class="img-placeholder">
-    <div class="img-icon">📷</div>
-    <div class="img-filename">maverik-mx-arms.jpg</div>
-    <div class="img-hint">Upload to GitHub as images/maverik-mx-arms.jpg</div>
-  </div>
-  <div class="img-hover"><span>📷 Change Image</span></div>
-  <input type="file" accept="image/*" onchange="previewImg(this)">
-</div></div>
-  <div class="alt-body">
-    <div class="alt-award">🏃 Most Mobile</div>
-    <div class="alt-name">ECD Echo Arm Pads</div>
-    <div class="alt-stars">★★★★☆</div>
-    <div class="alt-desc">SmartFlex technology hardens on impact for protection while staying light and flexible enough that you'll forget you're wearing them.SmartFlex technology hardens on impact for protection while staying light and flexible enough that you'll forget you're wearing them..</div>
-    <div class="alt-footer">
-      <div class="alt-price">$119.99</div>
-      <a href="https://amzn.to/3RcDirE" class="alt-btn" target="_blank>Amazon →</a>
+  <div class="alt-grid">
+
+    <!-- ECD Echo -->
+    <div class="alt-card">
+      <div class="alt-img">
+        <div class="img-slot" style="height:160px">
+          <img src="images/ecd-echo-arms.jpg" alt="ECD Echo Arm Pads" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+          <div class="img-placeholder"><div class="img-icon">📷</div><div class="img-filename">ecd-echo-arms.jpg</div><div class="img-hint">Upload to GitHub as images/ecd-echo-arms.jpg</div></div>
+          <div class="img-hover"><span>📷 Change Image</span></div>
+          <input type="file" accept="image/*" onchange="previewImg(this)">
+        </div>
+      </div>
+      <div class="alt-body">
+        <div class="alt-award">🏃 Most Mobile</div>
+        <div class="alt-name">ECD Echo Arm Pads</div>
+        <div class="alt-stars">★★★★☆</div>
+        <div class="alt-desc">SmartFlex technology hardens on impact for protection while staying light and flexible enough that you'll forget you're wearing them.</div>
+        <div class="alt-footer">
+          <div class="alt-price">$119.99</div>
+          <a href="https://amzn.to/3RcDirE" class="alt-btn" target="_blank">Amazon →</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div><div class="alt-card">
-  <div class="alt-img"><div class="img-slot" style="height:160px" title="Click to preview — upload as images/warrior-burn-arms.jpg to GitHub">
-  <img src="images/warrior-burn-arms.jpg" alt="Warrior Burn Arm Pad" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
-  <div class="img-placeholder">
-    <div class="img-icon">📷</div>
-    <div class="img-filename">warrior-burn-arms.jpg</div>
-    <div class="img-hint">Upload to GitHub as images/warrior-burn-arms.jpg</div>
-  </div>
-  <div class="img-hover"><span>📷 Change Image</span></div>
-  <input type="file" accept="image/*" onchange="previewImg(this)">
-</div></div>
-  <div class="alt-body">
-    <div class="alt-award">💰 Best Budget</div>
-    <div class="alt-name">STX Stallion 450</div>
-    <div class="alt-stars">★★★★☆</div>
-    <div class="alt-desc">A no-frills pad that covers the basics. Legal for all youth leagues and adequate protection for beginners. Best price on this list.</div>
-    <div class="alt-footer">
-      <div class="alt-price">$59.99</div>
-      <a href="https://amzn.to/4eBn5pI" class="alt-btn" target="_blank">Amazon →</a>
+
+    <!-- STX Stallion 450 -->
+    <div class="alt-card">
+      <div class="alt-img">
+        <div class="img-slot" style="height:160px">
+          <img src="images/stx-stallion-450-arms.jpg" alt="STX Stallion 450" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+          <div class="img-placeholder"><div class="img-icon">📷</div><div class="img-filename">stx-stallion-450-arms.jpg</div><div class="img-hint">Upload to GitHub as images/stx-stallion-450-arms.jpg</div></div>
+          <div class="img-hover"><span>📷 Change Image</span></div>
+          <input type="file" accept="image/*" onchange="previewImg(this)">
+        </div>
+      </div>
+      <div class="alt-body">
+        <div class="alt-award">💰 Best Budget</div>
+        <div class="alt-name">STX Stallion 450</div>
+        <div class="alt-stars">★★★★☆</div>
+        <div class="alt-desc">A no-frills pad that covers the basics. Legal for all youth leagues and adequate protection for beginners. Best price on this list.</div>
+        <div class="alt-footer">
+          <div class="alt-price">$59.99</div>
+          <a href="https://amzn.to/4eBn5pI" class="alt-btn" target="_blank">Amazon →</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div><div class="alt-card">
-  <div class="alt-img"><div class="img-slot" style="height:160px" title="Click to preview — upload as images/epoch-integra-arms.jpg to GitHub">
-  <img src="images/epoch-integra-arms.jpg" alt="Epoch Integra Arm Pad" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
-  <div class="img-placeholder">
-    <div class="img-icon">📷</div>
-    <div class="img-filename">epoch-integra-arms.jpg</div>
-    <div class="img-hint">Upload to GitHub as images/epoch-integra-arms.jpg</div>
-  </div>
-  <div class="img-hover"><span>📷 Change Image</span></div>
-  <input type="file" accept="image/*" onchange="previewImg(this)">
-</div></div>
-  <div class="alt-body">
-    <div class="alt-award">🛡️ Best Defense</div>
-    <div class="alt-name">STX Cell VI Lacrosse Elbow Pads</div>
-    <div class="alt-stars">★★★★★</div>
-    <div class="alt-desc">Flexible GeoFlex II protection with a floating elbow cap for a full range of motion, customizable fit, and a breathable sleeve to keep you comfortable all game. The top pick for defensive players.</div>
-    <div class="alt-footer">
-      <div class="alt-price">$69.99</div>
-      <a href="https://amzn.to/3PskWCA" class="alt-btn" target="_blank">Amazon →</a>
+
+    <!-- STX Cell VI -->
+    <div class="alt-card">
+      <div class="alt-img">
+        <div class="img-slot" style="height:160px">
+          <img src="images/stx-cell-vi-arms.jpg" alt="STX Cell VI Elbow Pads" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+          <div class="img-placeholder"><div class="img-icon">📷</div><div class="img-filename">stx-cell-vi-arms.jpg</div><div class="img-hint">Upload to GitHub as images/stx-cell-vi-arms.jpg</div></div>
+          <div class="img-hover"><span>📷 Change Image</span></div>
+          <input type="file" accept="image/*" onchange="previewImg(this)">
+        </div>
+      </div>
+      <div class="alt-body">
+        <div class="alt-award">🛡️ Best Defense</div>
+        <div class="alt-name">STX Cell VI Lacrosse Elbow Pads</div>
+        <div class="alt-stars">★★★★★</div>
+        <div class="alt-desc">Flexible GeoFlex II protection with a floating elbow cap for full range of motion, customizable fit, and a breathable sleeve to keep you comfortable all game.</div>
+        <div class="alt-footer">
+          <div class="alt-price">$69.99</div>
+          <a href="https://amzn.to/3PskWCA" class="alt-btn" target="_blank">Amazon →</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div><div class="alt-card">
-  <div class="alt-img"><div class="img-slot" style="height:160px" title="Click to preview — upload as images/stx-youth-arms.jpg to GitHub">
-  <img src="images/stx-youth-arms.jpg" alt="STX Youth Arm Pad" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
-  <div class="img-placeholder">
-    <div class="img-icon">📷</div>
-    <div class="img-filename">stx-youth-arms.jpg</div>
-    <div class="img-hint">Upload to GitHub as images/stx-youth-arms.jpg</div>
-  </div>
-  <div class="img-hover"><span>📷 Change Image</span></div>
-  <input type="file" accept="image/*" onchange="previewImg(this)">
-</div></div>
-  <div class="alt-body">
-    <div class="alt-award">👦 Best Youth</div>
-    <div class="alt-name">STX Stallion 75 Lacrosse Arm Pads</div>
-    <div class="alt-stars">★★★★☆</div>
-    <div class="alt-desc">Sized for youth players with a simple strap system that kids can put on themselves. Legal for all youth leagues.</div>
-    <div class="alt-footer">
-      <div class="alt-price">$39.99</div>
-      <a href="https://amzn.to/4diMVN1" class="alt-btn" target="_blank">Amazon →</a>
+
+    <!-- STX Stallion 75 Youth -->
+    <div class="alt-card">
+      <div class="alt-img">
+        <div class="img-slot" style="height:160px">
+          <img src="images/stx-stallion-75-arms.jpg" alt="STX Stallion 75 Youth Arm Pads" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+          <div class="img-placeholder"><div class="img-icon">📷</div><div class="img-filename">stx-stallion-75-arms.jpg</div><div class="img-hint">Upload to GitHub as images/stx-stallion-75-arms.jpg</div></div>
+          <div class="img-hover"><span>📷 Change Image</span></div>
+          <input type="file" accept="image/*" onchange="previewImg(this)">
+        </div>
+      </div>
+      <div class="alt-body">
+        <div class="alt-award">👦 Best Youth</div>
+        <div class="alt-name">STX Stallion 75 Lacrosse Arm Pads</div>
+        <div class="alt-stars">★★★★☆</div>
+        <div class="alt-desc">Sized for youth players with a simple strap system that kids can put on themselves. Legal for all youth leagues.</div>
+        <div class="alt-footer">
+          <div class="alt-price">$39.99</div>
+          <a href="https://amzn.to/4diMVN1" class="alt-btn" target="_blank">Amazon →</a>
+        </div>
+      </div>
     </div>
+
   </div>
-</div></div>
+
+  <!-- BUYING GUIDE -->
   <div class="guide-section">
     <div class="guide-title">Buying Guide</div>
-    <div class="guide-grid"><div class="guide-item"><div class="guide-item-title">Required Equipment</div><div class="guide-item-text">Arm pads are required in virtually all youth, high school, and college leagues. Check your rulebook for coverage requirements.</div></div><div class="guide-item"><div class="guide-item-title">Hard vs Soft Cap</div><div class="guide-item-text">Hard caps protect better against stick checks. Soft foam caps are more comfortable. Defenders should always choose hard caps.</div></div><div class="guide-item"><div class="guide-item-title">Fit</div><div class="guide-item-text">The elbow cap should sit directly over your elbow with your arm slightly bent. Pads that slide during play are the wrong size.</div></div><div class="guide-item"><div class="guide-item-title">Compression vs Strap</div><div class="guide-item-text">Compression sleeve pads stay in place better than strap pads during intense play. Worth paying slightly more for.</div></div></div>
+    <div class="guide-grid">
+      <div class="guide-item"><div class="guide-item-title">Required Equipment</div><div class="guide-item-text">Arm pads are required in virtually all youth, high school, and college leagues. Check your rulebook for coverage requirements.</div></div>
+      <div class="guide-item"><div class="guide-item-title">Hard vs Soft Cap</div><div class="guide-item-text">Hard caps protect better against stick checks. Soft foam caps are more comfortable. Defenders should always choose hard caps.</div></div>
+      <div class="guide-item"><div class="guide-item-title">Fit</div><div class="guide-item-text">The elbow cap should sit directly over your elbow with your arm slightly bent. Pads that slide during play are the wrong size.</div></div>
+      <div class="guide-item"><div class="guide-item-title">Compression vs Strap</div><div class="guide-item-text">Compression sleeve pads stay in place better than strap pads during intense play. Worth paying slightly more for.</div></div>
+    </div>
   </div>
+
+  <!-- FAQ -->
   <div class="section-title">Frequently Asked Questions</div>
-  <div class="faq-item"><div class="faq-q">Are elbow pads required?</div><div class="faq-a">Yes — arm pads are required in most youth, high school, and college leagues. Coverage requirements vary so check your rulebook.</div></div><div class="faq-item"><div class="faq-q">How should they fit?</div><div class="faq-a">The elbow cap sits directly over your elbow when your arm is slightly bent. If they slide during play, size down.</div></div><div class="faq-item"><div class="faq-q">Hard cap vs soft foam?</div><div class="faq-a">Hard caps offer better protection against checks. Soft caps are more comfortable. Defenders should always go hard cap.</div></div><div class="faq-item"><div class="faq-q">Do I need different pads for different positions?</div><div class="faq-a">Attack and midfield players prioritize mobility so thinner pads are preferred. Defenders prioritize protection so thicker harder caps are better.</div></div>
+  <div class="faq-item"><div class="faq-q">Are elbow pads required?</div><div class="faq-a">Yes — arm pads are required in most youth, high school, and college leagues. Coverage requirements vary so check your rulebook.</div></div>
+  <div class="faq-item"><div class="faq-q">How should they fit?</div><div class="faq-a">The elbow cap sits directly over your elbow when your arm is slightly bent. If they slide during play, size down.</div></div>
+  <div class="faq-item"><div class="faq-q">Hard cap vs soft foam?</div><div class="faq-a">Hard caps offer better protection against checks. Soft caps are more comfortable. Defenders should always go hard cap.</div></div>
+  <div class="faq-item"><div class="faq-q">Do I need different pads for different positions?</div><div class="faq-a">Attack and midfield players prioritize mobility so thinner pads are preferred. Defenders prioritize protection so thicker harder caps are better.</div></div>
+
 </div>
+
 <footer>
   <div class="footer-inner">
     <div>
@@ -334,6 +326,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;ma
   </div>
   <div class="footer-bottom">LaxGearLab is a participant in the Amazon Services LLC Associates Program. We earn a small commission on purchases made through our links at no extra cost to you. All recommendations are independent and unsponsored.</div>
 </footer>
+
 <script>
 function previewImg(input) {
   if (!input.files || !input.files[0]) return;
@@ -347,26 +340,19 @@ function previewImg(input) {
   };
   reader.readAsDataURL(input.files[0]);
 }
-</script>
-<script>
-// Dropdown click handler
 document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
     var li = this.parentElement;
     var isOpen = li.classList.contains('open');
-    document.querySelectorAll('.nav-main > li').forEach(function(el) {
-      el.classList.remove('open');
-    });
+    document.querySelectorAll('.nav-main > li').forEach(function(el) { el.classList.remove('open'); });
     if (!isOpen) li.classList.add('open');
   });
 });
 document.addEventListener('click', function(e) {
   if (!e.target.closest('.nav-main')) {
-    document.querySelectorAll('.nav-main > li').forEach(function(el) {
-      el.classList.remove('open');
-    });
+    document.querySelectorAll('.nav-main > li').forEach(function(el) { el.classList.remove('open'); });
   }
 });
 </script>
