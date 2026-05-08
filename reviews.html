@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="In-depth lacrosse gear reviews. Honest, detailed breakdowns of the best sticks, helmets, gloves, cleats and more.">
+<title>Lacrosse Gear Reviews – LaxGearLab</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0d1b2a;--navy2:#1a2f47;--white:#fff;--off:#f8fafc;--border:#e2e8f0;--gray:#64748b;--text:#0f172a;--text2:#475569;--gold:#f59e0b;--gold2:#d97706;--green:#16a34a;--red:#dc2626}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);font-size:16px;line-height:1.7}
+nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;position:sticky;top:0;z-index:200}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:var(--white);text-decoration:none;letter-spacing:2px}
+.logo em{color:var(--gold);font-style:normal}
+.nav-main{display:flex;align-items:center;gap:0.25rem;list-style:none}
+.nav-main>li{position:relative}
+.nav-main>li>a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.825rem;font-weight:500;padding:0.5rem 0.875rem;border-radius:4px;display:flex;align-items:center;gap:0.25rem;transition:background 0.15s}
+.nav-main>li>a:hover{background:rgba(255,255,255,0.08);color:var(--white)}
+.nav-main>li.open>a{background:rgba(255,255,255,0.08);color:var(--white)}
+.nav-main>li.open .dropdown{display:block}
+.dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:8px;min-width:190px;box-shadow:0 8px 24px rgba(0,0,0,0.12);list-style:none;overflow:hidden;z-index:300}
+.dropdown a{display:block;padding:0.65rem 1.1rem;font-size:0.825rem;color:var(--text);text-decoration:none;font-weight:500}
+.dropdown a:hover{background:var(--off);color:var(--navy)}
+.dropdown li+li a{border-top:1px solid var(--border)}
+.nav-cta{background:var(--gold);color:var(--navy);padding:0.45rem 1.1rem;border-radius:5px;font-weight:700;font-size:0.825rem;text-decoration:none}
+.nav-cta:hover{background:var(--gold2)}
+.breadcrumb{padding:0.75rem 2rem;background:var(--off);border-bottom:1px solid var(--border);font-size:0.75rem;color:var(--gray)}
+.breadcrumb a{color:var(--navy);text-decoration:none;font-weight:500}
+
+/* HERO */
+.reviews-hero{background:var(--navy);padding:3.5rem 2rem;text-align:center}
+.reviews-hero-eyebrow{font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+.reviews-hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:2px;color:var(--white);margin-bottom:0.75rem}
+.reviews-hero-desc{font-size:1rem;color:rgba(255,255,255,0.6);max-width:520px;margin:0 auto}
+
+/* FILTER TABS */
+.filter-wrap{background:var(--off);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center}
+.filter-btn{background:var(--white);border:1px solid var(--border);color:var(--text2);padding:0.4rem 1rem;border-radius:20px;font-size:0.8rem;font-weight:500;cursor:pointer;transition:all 0.15s;font-family:'Inter',sans-serif}
+.filter-btn:hover,.filter-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
+
+/* REVIEWS GRID */
+.reviews-wrap{max-width:1060px;margin:0 auto;padding:3rem 1.5rem 5rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
+.review-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;text-decoration:none;display:flex;flex-direction:column}
+.review-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.1);transform:translateY(-3px)}
+.review-card-img{height:200px;background:var(--off);position:relative;overflow:hidden}
+.review-card-img img{width:100%;height:100%;object-fit:contain;padding:1.5rem}
+.review-card-img .no-img{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.review-card-cat{position:absolute;top:12px;left:12px;background:var(--navy);color:var(--white);font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.25rem 0.75rem;border-radius:3px}
+.review-card-body{padding:1.25rem;flex:1;display:flex;flex-direction:column;gap:0.5rem}
+.review-card-title{font-weight:700;font-size:1rem;color:var(--navy);line-height:1.3}
+.review-card-stars{color:var(--gold);font-size:0.8rem}
+.review-card-excerpt{font-size:0.825rem;color:var(--text2);line-height:1.5;flex:1}
+.review-card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+.review-card-price{font-size:1.1rem;font-weight:800;color:var(--navy)}
+.review-card-link{font-size:0.775rem;font-weight:600;color:var(--gold);display:flex;align-items:center;gap:0.25rem}
+
+/* SECTION HEADING */
+.section-heading{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:2px;color:var(--navy);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem}
+.section-heading::after{content:'';flex:1;height:1px;background:var(--border)}
+
+footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
+.footer-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);letter-spacing:2px;margin-bottom:0.5rem}
+.footer-logo em{color:var(--gold);font-style:normal}
+.footer-tagline{font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.5}
+.footer-links{display:flex;flex-direction:column;gap:0.35rem;text-align:right}
+.footer-links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{max-width:1060px;margin:1.5rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);font-size:0.72rem;color:rgba(255,255,255,0.25);line-height:1.6}
+
+/* ── IMAGE SLOT ── */
+.img-slot{position:relative;cursor:pointer;background:#f1f5f9;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.img-slot img{width:100%;height:100%;object-fit:contain;padding:1rem;display:block}
+.img-slot.empty img{display:none}
+.img-placeholder{display:none;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;padding:1.5rem;text-align:center;position:absolute;inset:0}
+.img-slot.empty .img-placeholder{display:flex}
+.img-slot:not(.empty):hover .img-hover{display:flex}
+.img-hover{display:none;position:absolute;inset:0;background:rgba(0,0,0,0.45);flex-direction:column;align-items:center;justify-content:center;gap:0.35rem}
+.img-hover span{color:var(--white);font-size:0.8rem;font-weight:600}
+.img-icon{font-size:2rem;line-height:1}
+.img-filename{font-size:0.7rem;font-weight:600;color:var(--navy);font-family:monospace;background:rgba(13,27,42,0.08);padding:0.2rem 0.5rem;border-radius:3px}
+.img-hint{font-size:0.65rem;color:var(--gray)}
+.img-slot input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Lax<em>Gear</em>Lab</a>
+  <ul class="nav-main">
+    <li class="has-dropdown">
+      <a href="#">Sticks ▾</a>
+      <ul class="dropdown">
+        <li><a href="offensive-sticks.html">Offensive Sticks</a></li>
+        <li><a href="defensive-sticks.html">Defensive Sticks</a></li>
+        <li><a href="girls-sticks.html">Girls Sticks</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <a href="#">Protection ▾</a>
+      <ul class="dropdown">
+        <li><a href="helmets.html">Helmets</a></li>
+        <li><a href="gloves.html">Gloves</a></li>
+        <li><a href="elbow-pads.html">Elbow Pads</a></li>
+        <li><a href="chest-protectors.html">Chest &amp; Shoulder</a></li>
+      </ul>
+    </li>
+    <li><a href="cleats.html">Cleats</a></li>
+    <li><a href="gear-bags.html">Bags</a></li>
+    <li><a href="youth-equipment.html">Youth</a></li>
+    <li class="has-dropdown">
+      <a href="#">Reviews ▾</a>
+      <ul class="dropdown">
+        <li><a href="reviews.html#shafts">Shaft Reviews</a></li>
+        <li><a href="reviews.html#heads">Head Reviews</a></li>
+        <li><a href="reviews.html#helmets">Helmet Reviews</a></li>
+        <li><a href="reviews.html#cleats">Cleat Reviews</a></li>
+        <li><a href="reviews.html#training">Training Equipment</a></li>
+        <li><a href="reviews.html#gloves">Gloves &amp; Protective</a></li>
+      </ul>
+    </li>
+  </ul>
+  <a href="index.html#chat" class="nav-cta">Find My Gear</a>
+</nav>
+
+<div class="breadcrumb"><a href="index.html">Home</a> › Gear Reviews</div>
+
+<div class="reviews-hero">
+  <div class="reviews-hero-eyebrow">In-Depth Reviews</div>
+  <div class="reviews-hero-title">Lacrosse Gear Reviews</div>
+  <div class="reviews-hero-desc">Detailed, honest breakdowns of the best lacrosse gear on the market. Updated regularly as new products drop.</div>
+</div>
+
+<div class="filter-wrap">
+  <button class="filter-btn active" onclick="filterReviews('all', this)">All Reviews</button>
+  <button class="filter-btn" onclick="filterReviews('helmet', this)">Helmets</button>
+  <button class="filter-btn" onclick="filterReviews('stick', this)">Sticks</button>
+  <button class="filter-btn" onclick="filterReviews('glove', this)">Gloves</button>
+  <button class="filter-btn" onclick="filterReviews('cleat', this)">Cleats</button>
+  <button class="filter-btn" onclick="filterReviews('pad', this)">Pads</button>
+  <button class="filter-btn" onclick="filterReviews('bag', this)">Bags</button>
+</div>
+
+<div class="reviews-wrap">
+  <div class="section-heading">Latest Reviews</div>
+  <div class="reviews-grid" id="reviewsGrid">
+
+    <!-- Cascade XRS Pro -->
+    <a href="review-cascade-xrs-pro.html" class="review-card" data-cat="helmet">
+      <div class="review-card-img" style="position:relative">
+        <div class="img-slot" style="height:200px" title="Click to preview — upload as images/cascade-xrs-pro.jpg to GitHub">
+  <img src="images/cascade-xrs-pro.jpg" alt="Cascade XRS Pro" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">cascade-xrs-pro.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/cascade-xrs-pro.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div>
+        <div class="review-card-cat">Helmet</div>
+      </div>
+      <div class="review-card-body">
+        <div class="review-card-title">Cascade XRS Pro Review — Is It Worth $350?</div>
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-excerpt">The most popular helmet in college and pro lacrosse. We put it through a full season to find out if the price tag is justified.</div>
+        <div class="review-card-footer">
+          <div class="review-card-price">$349.99</div>
+          <span class="review-card-link">Read Review →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- StringKing Complete 2 -->
+    <a href="review-stringking-complete-2.html" class="review-card" data-cat="stick">
+      <div class="review-card-img" style="position:relative">
+        <div class="img-slot" style="height:200px" title="Click to preview — upload as images/stringking-complete-2.jpg to GitHub">
+  <img src="images/stringking-complete-2.jpg" alt="StringKing Complete 2" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">stringking-complete-2.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/stringking-complete-2.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div>
+        <div class="review-card-cat">Offensive Stick</div>
+      </div>
+      <div class="review-card-body">
+        <div class="review-card-title">StringKing Complete 2 Senior Review</div>
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-excerpt">The best complete stick for beginners and intermediate players. D1 mesh straight out of the box — but is it really worth it?</div>
+        <div class="review-card-footer">
+          <div class="review-card-price">$139.99</div>
+          <span class="review-card-link">Read Review →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- StringKing Composite 2 Pro -->
+    <a href="review-stringking-composite-2-pro.html" class="review-card" data-cat="stick">
+      <div class="review-card-img" style="position:relative">
+        <div class="img-slot" style="height:200px" title="Click to preview — upload as images/stringking-metal-3.jpg to GitHub">
+  <img src="images/stringking-metal-3.jpg" alt="StringKing Composite 2 Pro" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">stringking-metal-3.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/stringking-metal-3.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div>
+        <div class="review-card-cat">Defensive Shaft</div>
+      </div>
+      <div class="review-card-body">
+        <div class="review-card-title">StringKing Composite 2 Pro Defense Shaft Review</div>
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-excerpt">Carbon fiber construction, D1 trusted performance. We test whether this shaft lives up to the hype for serious defenders.</div>
+        <div class="review-card-footer">
+          <div class="review-card-price">$149.99</div>
+          <span class="review-card-link">Read Review →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- STX RZR 2 -->
+    <a href="review-stx-rzr-2.html" class="review-card" data-cat="glove">
+      <div class="review-card-img" style="position:relative">
+        <div class="img-slot" style="height:200px" title="Click to preview — upload as images/stx-surgeon-rzr.jpg to GitHub">
+  <img src="images/stx-surgeon-rzr.jpg" alt="STX RZR 2 Gloves" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">stx-surgeon-rzr.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/stx-surgeon-rzr.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div>
+        <div class="review-card-cat">Gloves</div>
+      </div>
+      <div class="review-card-body">
+        <div class="review-card-title">STX RZR 2 Lacrosse Gloves Review</div>
+        <div class="review-card-stars">★★★★☆</div>
+        <div class="review-card-excerpt">Maximum feel and flexibility for attack players. Ultra thin palm built for quick hands and fast releases — but how does it hold up?</div>
+        <div class="review-card-footer">
+          <div class="review-card-price">$89.99</div>
+          <span class="review-card-link">Read Review →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Nike Huarache 9 Elite -->
+    <a href="review-nike-huarache-9-elite.html" class="review-card" data-cat="cleat">
+      <div class="review-card-img" style="position:relative">
+        <div class="img-slot" style="height:200px" title="Click to preview — upload as images/nike-huarache-8.jpg to GitHub">
+  <img src="images/nike-huarache-8.jpg" alt="Nike Huarache 9 Elite" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">nike-huarache-8.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/nike-huarache-8.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div>
+        <div class="review-card-cat">Cleats</div>
+      </div>
+      <div class="review-card-body">
+        <div class="review-card-title">Nike Huarache 9 Elite Lacrosse Cleat Review</div>
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-excerpt">The most popular lacrosse cleat on the market. Flywire lockdown, elite traction, and comfortable from day one. Worth the price?</div>
+        <div class="review-card-footer">
+          <div class="review-card-price">$129.99</div>
+          <span class="review-card-link">Read Review →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Cascade CS -->
+    <a href="review-cascade-cs.html" class="review-card" data-cat="helmet">
+      <div class="review-card-img" style="position:relative">
+        <div class="img-slot" style="height:200px" title="Click to preview — upload as images/cascade-cs.jpg to GitHub">
+  <img src="images/cascade-cs.jpg" alt="Cascade CS" onerror="this.parentElement.classList.add('empty');this.style.display='none'">
+  <div class="img-placeholder">
+    <div class="img-icon">📷</div>
+    <div class="img-filename">cascade-cs.jpg</div>
+    <div class="img-hint">Upload to GitHub as images/cascade-cs.jpg</div>
+  </div>
+  <div class="img-hover"><span>📷 Change Image</span></div>
+  <input type="file" accept="image/*" onchange="previewImg(this)">
+</div>
+        <div class="review-card-cat">Helmet</div>
+      </div>
+      <div class="review-card-body">
+        <div class="review-card-title">Cascade CS Lacrosse Helmet Review</div>
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-excerpt">Same trusted Cascade protection at $150 less than the XRS Pro. Is the CS the smarter buy for most players?</div>
+        <div class="review-card-footer">
+          <div class="review-card-price">$199.99</div>
+          <span class="review-card-link">Read Review →</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Lax<em>Gear</em>Lab</div>
+      <div class="footer-tagline">Helping players find the right lacrosse gear.<br>No paid placements. Ever.</div>
+    </div>
+    <div class="footer-links">
+      <a href="offensive-sticks.html">Offensive Sticks</a>
+      <a href="defensive-sticks.html">Defensive Sticks</a>
+      <a href="helmets.html">Helmets</a>
+      <a href="gloves.html">Gloves</a>
+      <a href="cleats.html">Cleats</a>
+      <a href="reviews.html">All Reviews</a>
+      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+    </div>
+  </div>
+  <div class="footer-bottom">LaxGearLab is a participant in the Amazon Services LLC Associates Program. We earn a small commission on purchases made through our links at no extra cost to you.</div>
+</footer>
+
+<script>
+function filterReviews(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.review-card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var li = this.parentElement;
+    var isOpen = li.classList.contains('open');
+    document.querySelectorAll('.nav-main > li').forEach(function(el) { el.classList.remove('open'); });
+    if (!isOpen) li.classList.add('open');
+  });
+});
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-main')) {
+    document.querySelectorAll('.nav-main > li').forEach(function(el) { el.classList.remove('open'); });
+  }
+});
+</script>
+
+<script>
+function previewImg(input) {
+  if (!input.files || !input.files[0]) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const slot = input.closest('.img-slot');
+    let img = slot.querySelector('img');
+    img.src = e.target.result;
+    img.style.display = 'block';
+    slot.classList.remove('empty');
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+</script>
+</body>
+</html>
