@@ -8,14 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0d1b2a;--navy2:#1a2f47;--white:#fff;--off:#f8fafc;
-  --border:#e2e8f0;--gray:#64748b;--text:#0f172a;--text2:#475569;
-  --gold:#f59e0b;--gold2:#d97706;--green:#16a34a;
-}
+:root{--navy:#0d1b2a;--navy2:#1a2f47;--white:#fff;--off:#f8fafc;--border:#e2e8f0;--gray:#64748b;--text:#0f172a;--text2:#475569;--gold:#f59e0b;--gold2:#d97706;--green:#16a34a;}
 body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);font-size:16px;line-height:1.7}
-
-/* NAV */
 nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;position:sticky;top:0;z-index:200}
 .logo{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:var(--white);text-decoration:none;letter-spacing:2px}
 .logo em{color:var(--gold);font-style:normal}
@@ -26,14 +20,11 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .nav-main>li.open>a{background:rgba(255,255,255,0.08);color:var(--white)}
 .nav-main>li.open .dropdown{display:block}
 .dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:8px;min-width:190px;box-shadow:0 8px 24px rgba(0,0,0,0.12);list-style:none;overflow:hidden;z-index:300}
-/* click-based dropdown - see JS below */
 .dropdown a{display:block;padding:0.65rem 1.1rem;font-size:0.825rem;color:var(--text);text-decoration:none;font-weight:500}
 .dropdown a:hover{background:var(--off)}
 .dropdown li+li a{border-top:1px solid var(--border)}
 .nav-cta{background:var(--gold);color:var(--navy);padding:0.45rem 1.1rem;border-radius:5px;font-weight:700;font-size:0.825rem;text-decoration:none}
 .nav-cta:hover{background:var(--gold2)}
-
-/* HERO */
 .hero{background:var(--navy);padding:5rem 2rem 4rem;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:rgba(245,158,11,0.04)}
 .hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;border-radius:50%;background:rgba(245,158,11,0.03)}
@@ -47,13 +38,9 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .btn-primary:hover{background:var(--gold2)}
 .btn-outline{border:1.5px solid rgba(255,255,255,0.3);color:var(--white);padding:0.8rem 2rem;border-radius:6px;font-weight:500;font-size:0.95rem;text-decoration:none}
 .btn-outline:hover{border-color:rgba(255,255,255,0.6)}
-
-/* TRUST BAR */
 .trust{background:var(--off);border-bottom:1px solid var(--border);padding:0.875rem 2rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
 .trust-item{font-size:0.775rem;font-weight:500;color:var(--gray);display:flex;align-items:center;gap:0.4rem}
 .trust-dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
-
-/* CATEGORIES */
 .categories{max-width:1060px;margin:0 auto;padding:4rem 1.5rem}
 .section-eyebrow{font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;text-align:center}
 .section-heading{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:2px;color:var(--navy);text-align:center;margin-bottom:0.75rem}
@@ -70,11 +57,7 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .cat-desc{font-size:0.72rem;color:rgba(255,255,255,0.65)}
 .cat-card-arrow{position:absolute;top:12px;right:12px;width:28px;height:28px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--navy);font-weight:700;opacity:0;transition:opacity 0.2s}
 .cat-card:hover .cat-card-arrow{opacity:1}
-
-/* DIVIDER */
 .divider{height:1px;background:var(--border);max-width:1060px;margin:0 auto}
-
-/* HOW IT WORKS */
 .how{background:var(--off);padding:4rem 2rem}
 .how-inner{max-width:1060px;margin:0 auto}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;margin-top:2.5rem}
@@ -82,44 +65,8 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .step-num{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;flex-shrink:0}
 .step-title{font-weight:700;font-size:0.95rem;color:var(--navy);margin-bottom:0.25rem}
 .step-text{font-size:0.85rem;color:var(--text2);line-height:1.6}
-
-/* CHAT */
-.chat-section{max-width:1060px;margin:0 auto;padding:4rem 1.5rem}
-.chat-wrap{background:var(--navy);border-radius:14px;overflow:hidden}
-.chat-header{padding:1.5rem 2rem;border-bottom:1px solid rgba(255,255,255,0.08)}
-.chat-header-title{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:2px;color:var(--white);margin-bottom:0.25rem}
-.chat-header-sub{font-size:0.85rem;color:rgba(255,255,255,0.5)}
-.chat-messages{height:360px;overflow-y:auto;padding:1.5rem;display:flex;flex-direction:column;gap:1rem}
-.chat-messages::-webkit-scrollbar{width:4px}
-.chat-messages::-webkit-scrollbar-track{background:transparent}
-.chat-messages::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.15);border-radius:4px}
-.msg{max-width:80%;display:flex;flex-direction:column;gap:0.25rem}
-.msg.bot{align-self:flex-start}
-.msg.user{align-self:flex-end}
-.msg-bubble{padding:0.75rem 1rem;border-radius:10px;font-size:0.875rem;line-height:1.6}
-.msg.bot .msg-bubble{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.9)}
-.msg.user .msg-bubble{background:var(--gold);color:var(--navy);font-weight:500}
-.msg-bubble a{color:var(--gold);text-decoration:underline}
-.msg.bot .msg-bubble a{color:var(--gold)}
-.msg-label{font-size:0.65rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.3)}
-.msg.user .msg-label{text-align:right;color:rgba(255,255,255,0.3)}
-.chat-input-row{padding:1.25rem 1.5rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;gap:0.75rem}
-.chat-input{flex:1;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:0.75rem 1rem;color:var(--white);font-size:0.875rem;font-family:'Inter',sans-serif;outline:none}
-.chat-input::placeholder{color:rgba(255,255,255,0.3)}
-.chat-input:focus{border-color:rgba(245,158,11,0.5);background:rgba(255,255,255,0.09)}
-.chat-send{background:var(--gold);color:var(--navy);border:none;border-radius:6px;padding:0.75rem 1.25rem;font-weight:700;font-size:0.875rem;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap}
-.chat-send:hover{background:var(--gold2)}
-.chat-send:disabled{opacity:0.5;cursor:not-allowed}
-.typing{display:flex;gap:4px;align-items:center;padding:0.5rem 0}
-.typing span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.3);animation:bounce 1.2s infinite}
-.typing span:nth-child(2){animation-delay:0.2s}
-.typing span:nth-child(3){animation-delay:0.4s}
-@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
-.quick-questions{padding:0 1.5rem 1.25rem;display:flex;gap:0.5rem;flex-wrap:wrap}
-.qq-btn{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);padding:0.35rem 0.875rem;border-radius:20px;font-size:0.775rem;cursor:pointer;font-family:'Inter',sans-serif;transition:all 0.15s}
-.qq-btn:hover{background:rgba(245,158,11,0.15);border-color:rgba(245,158,11,0.3);color:var(--white)}
-
-/* FOOTER */
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.3)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:rgba(245,158,11,0.5) !important;}
 footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;margin-top:0}
 .footer-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start}
 .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);letter-spacing:2px;margin-bottom:0.5rem}
@@ -171,12 +118,11 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;ma
   <a href="#chat" class="nav-cta">Find My Gear</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">Expert Lacrosse Gear Reviews</div>
     <h1>Find the <em>Right</em><br>Lacrosse Gear</h1>
-    <p>We research so you don't have to. Unbiased reviews, honest comparisons, and clear recommendations for every position, level, and budget.</p>
+    <p>We do the research so you don't have to. Unbiased reviews, honest comparisons, and clear recommendations for every position, level, and budget.</p>
     <div class="hero-btns">
       <a href="#chat" class="btn-primary">Find My Gear →</a>
       <a href="#categories" class="btn-outline">Browse All Categories</a>
@@ -192,7 +138,6 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;ma
   <div class="trust-item"><div class="trust-dot"></div>All budgets</div>
 </div>
 
-<!-- CATEGORIES -->
 <section class="categories" id="categories">
   <div class="section-eyebrow">All Categories</div>
   <div class="section-heading">What Are You Looking For?</div>
@@ -201,109 +146,68 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;ma
     <a href="offensive-sticks.html" class="cat-card">
       <img class="cat-card-img" src="images/cat-offensive-sticks.jpg" alt="Offensive Sticks" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="cat-card-img-placeholder" style="display:none">🥍</div>
-      <div class="cat-card-overlay"></div>
-      <div class="cat-card-arrow">→</div>
-      <div class="cat-card-body">
-        <div class="cat-name">Offensive Sticks</div>
-        <div class="cat-desc">Attack & midfield</div>
-      </div>
+      <div class="cat-card-overlay"></div><div class="cat-card-arrow">→</div>
+      <div class="cat-card-body"><div class="cat-name">Offensive Sticks</div><div class="cat-desc">Attack & midfield</div></div>
     </a>
     <a href="defensive-sticks.html" class="cat-card">
       <img class="cat-card-img" src="images/cat-defensive-sticks.jpg" alt="Defensive Poles" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="cat-card-img-placeholder" style="display:none">🥍</div>
-      <div class="cat-card-overlay"></div>
-      <div class="cat-card-arrow">→</div>
-      <div class="cat-card-body">
-        <div class="cat-name">Defensive Poles</div>
-        <div class="cat-desc">Defense & LSM</div>
-      </div>
+      <div class="cat-card-overlay"></div><div class="cat-card-arrow">→</div>
+      <div class="cat-card-body"><div class="cat-name">Defensive Poles</div><div class="cat-desc">Defense & LSM</div></div>
     </a>
     <a href="girls-sticks.html" class="cat-card">
       <img class="cat-card-img" src="images/cat-girls-sticks.jpg" alt="Girls Sticks" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="cat-card-img-placeholder" style="display:none">🥍</div>
-      <div class="cat-card-overlay"></div>
-      <div class="cat-card-arrow">→</div>
-      <div class="cat-card-body">
-        <div class="cat-name">Girls Sticks</div>
-        <div class="cat-desc">Women's & girls</div>
-      </div>
+      <div class="cat-card-overlay"></div><div class="cat-card-arrow">→</div>
+      <div class="cat-card-body"><div class="cat-name">Girls Sticks</div><div class="cat-desc">Women's & girls</div></div>
     </a>
     <a href="helmets.html" class="cat-card">
       <img class="cat-card-img" src="images/cat-helmets.jpg" alt="Helmets" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="cat-card-img-placeholder" style="display:none">🥍</div>
-      <div class="cat-card-overlay"></div>
-      <div class="cat-card-arrow">→</div>
-      <div class="cat-card-body">
-        <div class="cat-name">Helmets</div>
-        <div class="cat-desc">All levels</div>
-      </div>
+      <div class="cat-card-overlay"></div><div class="cat-card-arrow">→</div>
+      <div class="cat-card-body"><div class="cat-name">Helmets</div><div class="cat-desc">All levels</div></div>
     </a>
     <a href="gloves.html" class="cat-card">
       <img class="cat-card-img" src="images/cat-gloves.jpg" alt="Gloves" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="cat-card-img-placeholder" style="display:none">🥍</div>
-      <div class="cat-card-overlay"></div>
-      <div class="cat-card-arrow">→</div>
-      <div class="cat-card-body">
-        <div class="cat-name">Gloves</div>
-        <div class="cat-desc">All positions</div>
-      </div>
+      <div class="cat-card-overlay"></div><div class="cat-card-arrow">→</div>
+      <div class="cat-card-body"><div class="cat-name">Gloves</div><div class="cat-desc">All positions</div></div>
     </a>
     <a href="elbow-pads.html" class="cat-card">
       <img class="cat-card-img" src="images/cat-elbow-pads.jpg" alt="Elbow Pads" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="cat-card-img-placeholder" style="display:none">🥍</div>
-      <div class="cat-card-overlay"></div>
-      <div class="cat-card-arrow">→</div>
-      <div class="cat-card-body">
-        <div class="cat-name">Elbow Pads</div>
-        <div class="cat-desc">Arm protection</div>
-      </div>
+      <div class="cat-card-overlay"></div><div class="cat-card-arrow">→</div>
+      <div class="cat-card-body"><div class="cat-name">Elbow Pads</div><div class="cat-desc">Arm protection</div></div>
     </a>
     <a href="chest-protectors.html" class="cat-card">
       <img class="cat-card-img" src="images/cat-chest-shoulder.jpg" alt="Chest & Shoulder" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="cat-card-img-placeholder" style="display:none">🥍</div>
-      <div class="cat-card-overlay"></div>
-      <div class="cat-card-arrow">→</div>
-      <div class="cat-card-body">
-        <div class="cat-name">Chest & Shoulder</div>
-        <div class="cat-desc">Goalies & field</div>
-      </div>
+      <div class="cat-card-overlay"></div><div class="cat-card-arrow">→</div>
+      <div class="cat-card-body"><div class="cat-name">Chest & Shoulder</div><div class="cat-desc">Goalies & field</div></div>
     </a>
     <a href="cleats.html" class="cat-card">
       <img class="cat-card-img" src="images/cat-cleats.jpg" alt="Cleats" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="cat-card-img-placeholder" style="display:none">🥍</div>
-      <div class="cat-card-overlay"></div>
-      <div class="cat-card-arrow">→</div>
-      <div class="cat-card-body">
-        <div class="cat-name">Cleats</div>
-        <div class="cat-desc">Grass & turf</div>
-      </div>
+      <div class="cat-card-overlay"></div><div class="cat-card-arrow">→</div>
+      <div class="cat-card-body"><div class="cat-name">Cleats</div><div class="cat-desc">Grass & turf</div></div>
     </a>
     <a href="gear-bags.html" class="cat-card">
       <img class="cat-card-img" src="images/cat-gear-bags.jpg" alt="Gear Bags" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="cat-card-img-placeholder" style="display:none">🥍</div>
-      <div class="cat-card-overlay"></div>
-      <div class="cat-card-arrow">→</div>
-      <div class="cat-card-body">
-        <div class="cat-name">Gear Bags</div>
-        <div class="cat-desc">Carry everything</div>
-      </div>
+      <div class="cat-card-overlay"></div><div class="cat-card-arrow">→</div>
+      <div class="cat-card-body"><div class="cat-name">Gear Bags</div><div class="cat-desc">Carry everything</div></div>
     </a>
     <a href="youth-equipment.html" class="cat-card">
       <img class="cat-card-img" src="images/cat-youth.jpg" alt="Youth Equipment" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="cat-card-img-placeholder" style="display:none">🥍</div>
-      <div class="cat-card-overlay"></div>
-      <div class="cat-card-arrow">→</div>
-      <div class="cat-card-body">
-        <div class="cat-name">Youth Equipment</div>
-        <div class="cat-desc">Ages 8–14</div>
-      </div>
+      <div class="cat-card-overlay"></div><div class="cat-card-arrow">→</div>
+      <div class="cat-card-body"><div class="cat-name">Youth Equipment</div><div class="cat-desc">Ages 8–14</div></div>
     </a>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- HOW IT WORKS -->
 <section class="how">
   <div class="how-inner">
     <div class="section-eyebrow" style="text-align:center">How It Works</div>
@@ -313,7 +217,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;ma
         <div class="step-num">1</div>
         <div>
           <div class="step-title">Choose Your Category</div>
-          <div class="step-text">Browse by equipment type or use our gear finder chat to get a personalized recommendation in seconds.</div>
+          <div class="step-text">Browse by equipment type or use our gear finder form to get a personalized recommendation within 24 hours.</div>
         </div>
       </div>
       <div class="step">
@@ -336,37 +240,98 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;ma
 
 <div class="divider"></div>
 
-<!-- CHAT -->
-<section class="chat-section" id="chat">
-  <div class="section-eyebrow" style="text-align:center">Gear Finder</div>
-  <div class="section-heading" style="text-align:center">Not Sure What You Need?</div>
-  <p class="section-sub">Tell us about your position, level, and budget and we'll point you to the right gear.</p>
-  <div class="chat-wrap">
-    <div class="chat-header">
-      <div class="chat-header-title">LaxGearLab Gear Advisor</div>
-      <div class="chat-header-sub">Ask anything about lacrosse equipment — position, budget, skill level</div>
-    </div>
-    <div class="chat-messages" id="chatMessages">
-      <div class="msg bot">
-        <div class="msg-label">Gear Advisor</div>
-        <div class="msg-bubble">Hey! I'm here to help you find the right lacrosse gear. Tell me your position, skill level, and budget and I'll point you to the best options on our site.</div>
+<!-- GEAR FINDER FORM -->
+<section id="chat" style="background:var(--navy);padding:5rem 2rem;">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <div style="font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">Free Gear Recommendations</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:2px;color:var(--white);margin-bottom:1rem;">Find Your Perfect Lacrosse Gear</h2>
+    <p style="color:rgba(255,255,255,0.6);margin-bottom:2.5rem;font-size:1rem;">Tell us about your player and we will send personalized gear recommendations within 24 hours — completely free.</p>
+
+    <form action="https://formspree.io/f/mlgzqpbp" method="POST" style="display:flex;flex-direction:column;gap:1rem;text-align:left;">
+
+      <input type="hidden" name="_next" value="https://laxgearlab.net/thank-you.html">
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;">Your Name</label>
+          <input type="text" name="name" required placeholder="First name" style="width:100%;padding:0.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:var(--white);font-size:0.9rem;font-family:'Inter',sans-serif;">
+        </div>
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;">Email Address</label>
+          <input type="email" name="email" required placeholder="your@email.com" style="width:100%;padding:0.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:var(--white);font-size:0.9rem;font-family:'Inter',sans-serif;">
+        </div>
       </div>
-    </div>
-    <div class="quick-questions">
-      <button class="qq-btn" onclick="sendQuick(this)">I'm a beginner attacker</button>
-      <button class="qq-btn" onclick="sendQuick(this)">Best helmet under $200</button>
-      <button class="qq-btn" onclick="sendQuick(this)">Girls stick for my daughter</button>
-      <button class="qq-btn" onclick="sendQuick(this)">Full youth setup under $300</button>
-      <button class="qq-btn" onclick="sendQuick(this)">Best defensive pole</button>
-    </div>
-    <div class="chat-input-row">
-      <input type="text" class="chat-input" id="chatInput" placeholder="Ask about any lacrosse gear..." onkeydown="if(event.key==='Enter')sendMsg()">
-      <button class="chat-send" id="sendBtn" onclick="sendMsg()">Send →</button>
-    </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;">Player Age</label>
+          <select name="age" required style="width:100%;padding:0.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:#1a2f47;color:var(--white);font-size:0.9rem;font-family:'Inter',sans-serif;">
+            <option value="" disabled selected>Select age</option>
+            <option>Under 8</option>
+            <option>8-10</option>
+            <option>11-13</option>
+            <option>14-15</option>
+            <option>16-18</option>
+            <option>18+</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;">Skill Level</label>
+          <select name="skill_level" required style="width:100%;padding:0.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:#1a2f47;color:var(--white);font-size:0.9rem;font-family:'Inter',sans-serif;">
+            <option value="" disabled selected>Select level</option>
+            <option>Beginner — First year</option>
+            <option>Intermediate — 1-3 years</option>
+            <option>Advanced — 3+ years</option>
+            <option>Elite — High school varsity / college</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;">Position</label>
+          <select name="position" required style="width:100%;padding:0.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:#1a2f47;color:var(--white);font-size:0.9rem;font-family:'Inter',sans-serif;">
+            <option value="" disabled selected>Select position</option>
+            <option>Attack</option>
+            <option>Midfield</option>
+            <option>Defense</option>
+            <option>Goalie</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;">Gender</label>
+          <select name="gender" required style="width:100%;padding:0.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:#1a2f47;color:var(--white);font-size:0.9rem;font-family:'Inter',sans-serif;">
+            <option value="" disabled selected>Select</option>
+            <option>Boys / Mens</option>
+            <option>Girls / Womens</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;">Budget</label>
+        <select name="budget" required style="width:100%;padding:0.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:#1a2f47;color:var(--white);font-size:0.9rem;font-family:'Inter',sans-serif;">
+          <option value="" disabled selected>Select budget</option>
+          <option>Under $100</option>
+          <option>$100-$200</option>
+          <option>$200-$400</option>
+          <option>$400+</option>
+          <option>No budget limit</option>
+        </select>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;">Anything else we should know? <span style="font-weight:400;opacity:0.6">(optional)</span></label>
+        <textarea name="additional_info" rows="3" placeholder="e.g. replacing old gear, specific brands they like, injuries to consider..." style="width:100%;padding:0.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:var(--white);font-size:0.9rem;font-family:'Inter',sans-serif;resize:vertical;"></textarea>
+      </div>
+
+      <button type="submit" style="background:var(--gold);color:var(--navy);padding:1rem;border-radius:6px;font-weight:700;font-size:1rem;border:none;cursor:pointer;font-family:'Inter',sans-serif;">Get Our Free Gear Recommendations →</button>
+      <p style="text-align:center;font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:0.25rem;">We respond within 24 hours. No spam ever.</p>
+    </form>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div>
@@ -391,135 +356,19 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem;ma
 </footer>
 
 <script>
-const PAGES = {
-  'offensive': 'offensive-sticks.html',
-  'attack': 'offensive-sticks.html',
-  'midfield': 'offensive-sticks.html',
-  'defensive': 'defensive-sticks.html',
-  'defense': 'defensive-sticks.html',
-  'pole': 'defensive-sticks.html',
-  'girls': 'girls-sticks.html',
-  'women': 'girls-sticks.html',
-  'helmet': 'helmets.html',
-  'glove': 'gloves.html',
-  'elbow': 'elbow-pads.html',
-  'arm pad': 'elbow-pads.html',
-  'chest': 'chest-protectors.html',
-  'shoulder': 'chest-protectors.html',
-  'goalie': 'chest-protectors.html',
-  'cleat': 'cleats.html',
-  'shoe': 'cleats.html',
-  'bag': 'gear-bags.html',
-  'youth': 'youth-equipment.html',
-  'kid': 'youth-equipment.html',
-  'beginner': 'offensive-sticks.html',
-};
-
-let history = [];
-
-async function sendMsg() {
-  const input = document.getElementById('chatInput');
-  const msg = input.value.trim();
-  if (!msg) return;
-  input.value = '';
-  addMsg('user', msg);
-  await getReply(msg);
-}
-
-function sendQuick(btn) {
-  const msg = btn.textContent;
-  addMsg('user', msg);
-  getReply(msg);
-}
-
-function addMsg(role, text) {
-  const box = document.getElementById('chatMessages');
-  const div = document.createElement('div');
-  div.className = `msg ${role}`;
-  div.innerHTML = `<div class="msg-label">${role === 'user' ? 'You' : 'Gear Advisor'}</div><div class="msg-bubble">${text}</div>`;
-  box.appendChild(div);
-  box.scrollTop = box.scrollHeight;
-  history.push({role: role === 'user' ? 'user' : 'assistant', content: text});
-}
-
-function showTyping() {
-  const box = document.getElementById('chatMessages');
-  const div = document.createElement('div');
-  div.className = 'msg bot';
-  div.id = 'typingIndicator';
-  div.innerHTML = '<div class="msg-label">Gear Advisor</div><div class="msg-bubble"><div class="typing"><span></span><span></span><span></span></div></div>';
-  box.appendChild(div);
-  box.scrollTop = box.scrollHeight;
-}
-
-function removeTyping() {
-  const t = document.getElementById('typingIndicator');
-  if (t) t.remove();
-}
-
-async function getReply(userMsg) {
-  const btn = document.getElementById('sendBtn');
-  btn.disabled = true;
-  showTyping();
-
-  const systemPrompt = `You are a helpful lacrosse gear advisor for LaxGearLab.com. Help users find the right lacrosse equipment.
-
-Our pages (link to these when relevant):
-- Offensive Sticks (attack/midfield): offensive-sticks.html
-- Defensive Sticks (defense/LSM): defensive-sticks.html  
-- Girls Sticks (women's/girls): girls-sticks.html
-- Helmets: helmets.html
-- Gloves: gloves.html
-- Elbow Pads: elbow-pads.html
-- Chest & Shoulder Pads: chest-protectors.html
-- Cleats: cleats.html
-- Gear Bags: gear-bags.html
-- Youth Equipment (ages 8-14): youth-equipment.html
-
-Be concise and friendly. Ask clarifying questions if needed (position, age, budget, level). Give a clear recommendation and link to the relevant page using HTML anchor tags. Keep responses under 100 words. Never recommend gear outside our categories.`;
-
-  try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 300,
-        system: systemPrompt,
-        messages: history.filter(m => m.role === 'user' || m.role === 'assistant').slice(-8)
-      })
-    });
-    const data = await response.json();
-    const reply = data.content?.[0]?.text || "Sorry, I couldn't get a response. Try browsing our categories above!";
-    removeTyping();
-    addMsg('bot', reply);
-  } catch(e) {
-    removeTyping();
-    addMsg('bot', 'Having trouble connecting right now. Browse our <a href="#categories">gear categories</a> above to find what you need!');
-  }
-  btn.disabled = false;
-}
-</script>
-
-<script>
-// Dropdown click handler
 document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
     var li = this.parentElement;
     var isOpen = li.classList.contains('open');
-    document.querySelectorAll('.nav-main > li').forEach(function(el) {
-      el.classList.remove('open');
-    });
+    document.querySelectorAll('.nav-main > li').forEach(function(el) { el.classList.remove('open'); });
     if (!isOpen) li.classList.add('open');
   });
 });
 document.addEventListener('click', function(e) {
   if (!e.target.closest('.nav-main')) {
-    document.querySelectorAll('.nav-main > li').forEach(function(el) {
-      el.classList.remove('open');
-    });
+    document.querySelectorAll('.nav-main > li').forEach(function(el) { el.classList.remove('open'); });
   }
 });
 </script>
