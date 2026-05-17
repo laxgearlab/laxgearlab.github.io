@@ -45,17 +45,17 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .img-filename{font-size:0.7rem;font-weight:600;color:var(--navy);font-family:monospace;background:rgba(13,27,42,0.08);padding:0.2rem 0.5rem;border-radius:3px}
 .img-hint{font-size:0.65rem;color:var(--gray)}
 .img-slot input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-.version-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:1.5rem 0 2.5rem}
-.version-card{border:2px solid var(--border);border-radius:12px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;display:block}
-.version-card:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(245,158,11,0.12)}
-.version-card.top{border-color:var(--gold);background:#fffbeb}
-.version-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem}
+/* VERSION CARDS — all identical */
+.version-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;margin:1.5rem 0 2.5rem}
+.version-card{border:2px solid var(--gold);border-radius:12px;padding:1.5rem;background:var(--off)}
+.version-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;font-family:'Inter',sans-serif}
 .version-name{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px;color:var(--navy);margin-bottom:0.25rem}
-.version-price{font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:0.5rem}
-.version-pos{font-size:0.8rem;font-weight:600;color:var(--gold);background:var(--navy);display:inline-block;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.75rem}
-.version-desc{font-size:0.825rem;color:var(--text2);line-height:1.6;margin-bottom:1rem}
-.version-btn{display:block;background:var(--navy);color:var(--white);text-align:center;padding:0.6rem;border-radius:5px;font-size:0.8rem;font-weight:700;text-decoration:none}
-.version-card.top .version-btn{background:var(--gold);color:var(--navy)}
+.version-price{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--navy);margin-bottom:0.5rem}
+.version-pos{font-size:0.78rem;font-weight:700;color:var(--navy);background:var(--gold);display:inline-block;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.75rem;font-family:'Inter',sans-serif}
+.version-desc{font-size:0.825rem;color:var(--text2);line-height:1.6;margin-bottom:1rem;font-family:'Inter',sans-serif}
+.version-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:0.7rem;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;font-family:'Inter',sans-serif}
+.version-btn:hover{background:var(--gold2)}
+/* VERDICT */
 .verdict{background:var(--navy);border-radius:12px;padding:2rem;margin-bottom:2.5rem;color:var(--white)}
 .verdict-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap}
 .verdict-label{font-size:0.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:0.35rem}
@@ -77,7 +77,7 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .verdict-specs{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem}
 .spec-pill{background:rgba(255,255,255,0.08);border-radius:4px;padding:0.25rem 0.75rem;font-size:0.75rem;color:rgba(255,255,255,0.7)}
 .spec-pill strong{color:var(--white);font-weight:600}
-.buy-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:0.875rem;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;margin-bottom:0.5rem}
+.buy-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:0.875rem;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none}
 .buy-btn:hover{background:var(--gold2)}
 .buy-note{text-align:center;font-size:0.7rem;color:rgba(255,255,255,0.4);margin-top:0.4rem}
 .score-card{background:var(--off);border-radius:10px;padding:1.5rem;margin-bottom:2rem}
@@ -195,17 +195,17 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
 
   <div class="article-body">
     <h2>Two Versions, One Decision</h2>
-    <p>The STX Cell VI comes in two versions — the full shoulder pad and the shoulder pad liner. Same Cell VI protection platform underneath, same NOCSAE certification, same D3O and CURV technology. The difference is coverage and bulk. Pick the wrong one and you are either overdressed for your position or leaving yourself exposed. Here is exactly how they differ and who each one is built for.</p>
+    <p>The STX Cell VI comes in two versions — the full shoulder pad and the shoulder pad liner. Same Cell VI protection platform, same NOCSAE certification, same D3O and CURV technology. The difference is coverage and bulk. Pick the wrong one and you are either overdressed for your position or leaving yourself exposed. Here is exactly how they differ and who each one is built for.</p>
   </div>
 
   <div class="version-grid">
-    <div class="version-card top">
+    <div class="version-card">
       <div class="version-badge">Full Coverage</div>
       <div class="version-name">Cell VI Shoulder Pad</div>
       <div class="version-price">$149.99</div>
       <div class="version-pos">Attack &amp; Midfield</div>
       <div class="version-desc">Full shoulder pad with adjustable shoulder caps, removable bicep pads, and complete chest and back protection. Built for players in heavy contact who need maximum coverage.</div>
-      <a href="https://amzn.to/3PrJmvS" class="version-btn" target="_blank">→ Check Price on Amazon</a>
+      <a href="https://www.amazon.com/STX-Cell-Lacrosse-Shoulder-Medium/dp/B0CPX64JBR/?tag=laxgearlab-20" class="version-btn" target="_blank">→ Check Price on Amazon</a>
     </div>
     <div class="version-card">
       <div class="version-badge">Low Profile</div>
@@ -213,7 +213,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
       <div class="version-price">$129.99</div>
       <div class="version-pos">Defense &amp; LSM</div>
       <div class="version-desc">Slimmer profile with the same NOCSAE-certified chest protection but without the bulky shoulder caps and bicep pads. Built for defenders who need maximum mobility.</div>
-      <a href="https://amzn.to/4wBbkGl" class="version-btn" target="_blank">→ Check Price on Amazon</a>
+      <a href="https://www.amazon.com/STX-Lacrosse-Shoulder-Liner-Large/dp/B0DW233JJ6/?tag=laxgearlab-20" class="version-btn" target="_blank">→ Check Price on Amazon</a>
     </div>
   </div>
 
@@ -250,7 +250,6 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
           <li>Removable bicep pads — reduce bulk when needed</li>
           <li>Premium buckle system stays locked all game</li>
           <li>Multiple stretch zones for mobility</li>
-          <li>GeoFlex II flexible chest protection</li>
         </ul>
       </div>
       <div class="verdict-cons">
@@ -262,15 +261,15 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
         </ul>
       </div>
     </div>
-    <a href="https://amzn.to/4tD7Oso" class="buy-btn" target="_blank">→ Check Price on Amazon — Cell VI Shoulder Pad</a>
+    <a href="https://www.amazon.com/STX-Cell-Lacrosse-Shoulder-Medium/dp/B0CPX64JBR/?tag=laxgearlab-20" class="buy-btn" target="_blank">→ Check Price on Amazon — Cell VI Shoulder Pad</a>
     <div class="buy-note">Free Prime shipping · XS through XL · Attack &amp; Midfield players</div>
   </div>
 
-  <div class="verdict" style="background:var(--navy2);">
+  <div class="verdict">
     <div class="verdict-top">
       <div>
         <div class="verdict-label">Defense &amp; LSM — Low Profile Pick</div>
-        <div class="verdict-name">STX Cell VI Shoulder Pad Liner</div>
+        <div class="verdict-name">STX Cell VI Shoulder Liner</div>
         <div class="verdict-stars">★★★★★</div>
       </div>
       <div>
@@ -278,7 +277,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
         <div class="verdict-price-note">on Amazon</div>
       </div>
     </div>
-    <div class="verdict-summary">The Cell VI Shoulder Pad Liner is the same Cell VI platform stripped down for defenders and LSMs who need to drive their pole, deliver checks, and clear without shoulder caps and bicep pads getting in the way. You still get NOCSAE-certified chest and cardiac protection with D3O and CURV technology — you just lose the bulk around the shoulders and arms. The result is a pad that feels nearly invisible during play while still meeting protection requirements. Defenders who have always hated the feeling of a full shoulder pad will love this version. At $129.99 it is $20 less than the full pad.</div>
+    <div class="verdict-summary">The Cell VI Shoulder Liner is the same Cell VI platform stripped down for defenders and LSMs who need to drive their pole, deliver checks, and clear without shoulder caps and bicep pads getting in the way. You still get NOCSAE-certified chest and cardiac protection with D3O and CURV technology — you just lose the bulk around the shoulders and arms. The result is a pad that feels nearly invisible during play while still meeting protection requirements. At $129.99 it is $20 less than the full pad and the right call for any serious defender.</div>
     <div class="verdict-specs">
       <div class="spec-pill"><strong>Protection:</strong> D3O + CURV</div>
       <div class="spec-pill"><strong>Standard:</strong> NOCSAE certified</div>
@@ -309,7 +308,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
         </ul>
       </div>
     </div>
-    <a href="https://amzn.to/4tD9zpm" class="buy-btn" target="_blank">→ Check Price on Amazon — Cell VI Shoulder Liner</a>
+    <a href="https://www.amazon.com/STX-Lacrosse-Shoulder-Liner-Large/dp/B0DW233JJ6/?tag=laxgearlab-20" class="buy-btn" target="_blank">→ Check Price on Amazon — Cell VI Shoulder Liner</a>
     <div class="buy-note">Free Prime shipping · S through XL · Defenders &amp; LSM players</div>
   </div>
 
@@ -324,18 +323,14 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
 
   <div class="article-body">
 
-    <h2>D3O and CURV — What Actually Makes These Pads Different</h2>
-    <p>Most shoulder pads use standard EVA foam or hard plastic plates for protection. The Cell VI uses two technologies that most lacrosse pads do not. D3O is a military-grade impact material that stays soft and flexible during normal movement but stiffens instantly on impact to absorb and disperse force. CURV is a high-performance composite used in motorcycle and ski protective gear that delivers exceptional rigidity and impact resistance at a fraction of the weight of traditional plastics.</p>
-    <p>Together they let STX make the Cell VI significantly thinner and lighter than the Cell V while actually improving the protection rating. The result is a pad that does not feel like armor when you put it on — it moves with you, breathes, and only does its job when it needs to.</p>
+    <h2>D3O and CURV — What Makes These Pads Different</h2>
+    <p>Most shoulder pads use standard EVA foam or hard plastic plates. The Cell VI uses D3O — a military-grade material that stays soft during normal movement but stiffens instantly on impact — and CURV, a high-performance composite used in motorcycle and ski protective gear. Together they let STX make the Cell VI 17% thinner and 13% lighter than the Cell V while actually improving the protection rating.</p>
 
     <h2>NOCSAE ND200-22 — Why It Matters</h2>
-    <p>The Cell VI meets the updated 2022 NOCSAE ND200-22 standard, which specifically addresses cardiac protection — reducing the risk of commotio cordis, a serious condition caused by a sharp blow to the chest. Many leagues are now requiring this standard. Both the full pad and the liner meet it. If your league requires NOCSAE ND200-22, either version has you covered.</p>
-
-    <h2>The Buckle System — Finally Fixed</h2>
-    <p>One of the biggest complaints about the Cell V was the hooked buckling system that came undone constantly during games. STX completely redesigned this for the Cell VI. The new premium buckle locks securely and stays put through full practices and games. Small detail, massive improvement for anyone who played in the Cell V and dealt with constantly refastening their shoulder pad.</p>
+    <p>The Cell VI meets the updated 2022 NOCSAE ND200-22 standard for cardiac protection, reducing the risk of commotio cordis from sharp chest impacts. Many leagues now require this standard. Both the full pad and the liner are covered. Always confirm requirements with your specific league before purchasing.</p>
 
     <h2>Full Pad vs Liner — The Simple Rule</h2>
-    <p>Think about where you take checks. Attack players absorb slashing checks and shoulder contact regularly — the full pad's shoulder caps and bicep pads exist for a reason. Defenders initiate contact rather than absorb it. The extra bulk of shoulder caps and bicep pads actively gets in the way of driving your pole and delivering checks. The liner gives defenders the chest protection they need without any of the bulk that slows them down. Middies generally go with the full pad — but if you play a two-way style and prioritize mobility, the liner is a legitimate option.</p>
+    <p>Attack players and middies absorb regular stick checks and shoulder contact — get the full pad. Defenders initiate contact rather than absorb it, and the extra bulk of shoulder caps and bicep pads actively interferes with how you drive your pole. The liner gives you the chest protection you need without anything slowing you down.</p>
 
     <h2>Who Is It For?</h2>
     <div class="who-grid">
@@ -345,15 +340,14 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
           <li>An attack or midfield player (Full Pad)</li>
           <li>A defender or LSM who needs max mobility (Liner)</li>
           <li>Playing in a league requiring NOCSAE ND200-22</li>
-          <li>Upgrading from the Cell V or older shoulder pad</li>
-          <li>A player who wants elite protection without bulk</li>
+          <li>Upgrading from the Cell V or an older shoulder pad</li>
         </ul>
       </div>
       <div class="who-card no">
         <div class="who-title">✗ Look Elsewhere If You Are:</div>
         <ul class="who-list">
           <li>A beginner — more affordable options exist</li>
-          <li>Looking for a budget shoulder pad under $75</li>
+          <li>Looking for a budget pad under $75</li>
           <li>A goalie — you need goalie-specific chest protection</li>
         </ul>
       </div>
@@ -410,28 +404,28 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
     </table>
 
     <h2>Final Verdict</h2>
-    <p>The STX Cell VI is the best shoulder pad STX has ever made. Getting 17% thinner and 13% lighter while simultaneously upgrading to meet the more demanding 2022 NOCSAE cardiac protection standard is a real engineering win. The D3O and CURV combination delivers military-grade protection at a weight that does not slow you down. The buckle system is finally fixed. Whether you go with the full pad at $149.99 or the liner at $129.99 comes down entirely to your position — both versions are exceptional at what they are designed to do.</p>
+    <p>The STX Cell VI is the best shoulder pad STX has ever made. Getting 17% thinner and 13% lighter while upgrading to the 2022 NOCSAE cardiac protection standard is a genuine improvement — not just marketing. The D3O and CURV combination delivers military-grade protection at a weight that does not slow you down. Whether you go with the full pad at $149.99 or the liner at $129.99 comes down entirely to your position — both versions are exceptional at what they are designed to do.</p>
 
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
       <div class="faq-q">What is the difference between the STX Cell VI Shoulder Pad and the Liner?</div>
-      <div class="faq-a">The full shoulder pad includes adjustable shoulder caps and removable bicep pads for complete upper-body coverage — built for attack and midfield players who absorb regular checks. The liner strips those out for a low-profile fit with the same chest and cardiac protection — built for defenders and LSMs who need maximum mobility. Both versions are NOCSAE ND200-22 certified.</div>
+      <div class="faq-a">The full pad includes adjustable shoulder caps and removable bicep pads — built for attack and midfield players who absorb regular checks. The liner removes those for a low-profile fit with the same chest and cardiac protection — built for defenders and LSMs who need maximum mobility. Both are NOCSAE ND200-22 certified.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Does the STX Cell VI meet NOCSAE requirements?</div>
-      <div class="faq-a">Yes. Both the full pad and the liner meet the 2022 NOCSAE ND200-22 standard for chest and cardiac protection. This is the most current NOCSAE standard for lacrosse shoulder pads and is required by many leagues. Always confirm requirements with your specific league before purchasing.</div>
+      <div class="faq-a">Yes. Both the full pad and the liner meet the 2022 NOCSAE ND200-22 standard for chest and cardiac protection. Always confirm requirements with your specific league before purchasing.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">How does the STX Cell VI compare to the Cell V?</div>
-      <div class="faq-a">The Cell VI is 17% thinner and 13% lighter than the Cell V while offering better protection. The buckle system has been completely redesigned — the Cell V's hooked buckle was notorious for coming undone mid-game. The Cell VI also adds D3O and CURV technology not present in the Cell V and meets the updated 2022 NOCSAE cardiac standard the Cell V does not.</div>
+      <div class="faq-a">The Cell VI is 17% thinner and 13% lighter than the Cell V while offering better protection. The buckle system has been completely redesigned — the Cell V's hooked buckle was notorious for coming undone mid-game. The Cell VI also adds D3O and CURV technology not found in the Cell V.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Does the STX Cell VI run true to size?</div>
-      <div class="faq-a">Most players find the Cell VI runs slightly small. If you are between sizes or prefer a more comfortable fit, sizing up one size is recommended. Check STX's sizing chart which matches height and weight to pad size before ordering.</div>
+      <div class="faq-a">Most players find the Cell VI runs slightly small. If you are between sizes or prefer a more comfortable fit, sizing up one size is recommended. Check STX's sizing chart before ordering.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Can a midfielder use the Cell VI Liner instead of the full pad?</div>
-      <div class="faq-a">Yes — if you are a two-way midfielder who prioritizes mobility over maximum shoulder coverage the liner is a solid choice. However if you play a physical style and regularly absorb contact from defenders the full pad's shoulder caps and bicep pads provide meaningful additional protection that is worth the extra bulk.</div>
+      <div class="faq-a">Yes — if you are a two-way midfielder who prioritizes mobility over maximum shoulder coverage the liner is a solid choice. If you play a physical style and regularly absorb contact from defenders, the full pad's shoulder caps provide meaningful additional protection.</div>
     </div>
 
     <h2>Related Reviews</h2>
@@ -439,7 +433,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
       <a href="review-stx-cell-vi-elbow-pads.html" class="related-card">
         <div class="related-cat">Elbow Pads</div>
         <div class="related-name">STX Cell VI Elbow Pads</div>
-        <div class="related-price">$89.99 – $114.99</div>
+        <div class="related-price">$69.99 – $114.99</div>
       </a>
       <a href="review-warrior-evo-v.html" class="related-card">
         <div class="related-cat">Gloves</div>

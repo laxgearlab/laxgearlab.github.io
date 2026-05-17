@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="STX Cell VI elbow pad review 2026. Three versions — Arm Guards ($114.99), Arm Pads ($89.99), Elbow Caps ($69.99). Find out which one is right for your position and style of play.">
-<title>STX Cell VI Elbow Pad Review 2026 – Which Version Is Right For You? | LaxGearLab</title>
+<meta name="description" content="STX Cell VI elbow pad review 2026. Three versions — Arm Guards ($114.99), Arm Pads ($89.99), Elbow Caps ($69.99). Which one is right for your position? Full breakdown.">
+<title>STX Cell VI Elbow Pad Review 2026 – LaxGearLab</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -45,6 +45,17 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .img-filename{font-size:0.7rem;font-weight:600;color:var(--navy);font-family:monospace;background:rgba(13,27,42,0.08);padding:0.2rem 0.5rem;border-radius:3px}
 .img-hint{font-size:0.65rem;color:var(--gray)}
 .img-slot input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+/* VERSION CARDS — all identical */
+.version-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;margin:1.5rem 0 2.5rem}
+.version-card{border:2px solid var(--gold);border-radius:12px;padding:1.5rem;background:var(--off)}
+.version-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;font-family:'Inter',sans-serif}
+.version-name{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px;color:var(--navy);margin-bottom:0.25rem}
+.version-price{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--navy);margin-bottom:0.5rem}
+.version-pos{font-size:0.78rem;font-weight:700;color:var(--navy);background:var(--gold);display:inline-block;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.75rem;font-family:'Inter',sans-serif}
+.version-desc{font-size:0.825rem;color:var(--text2);line-height:1.6;margin-bottom:1rem;font-family:'Inter',sans-serif}
+.version-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:0.7rem;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;font-family:'Inter',sans-serif}
+.version-btn:hover{background:var(--gold2)}
+/* VERDICT */
 .verdict{background:var(--navy);border-radius:12px;padding:2rem;margin-bottom:2.5rem;color:var(--white)}
 .verdict-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap}
 .verdict-label{font-size:0.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:0.35rem}
@@ -66,7 +77,7 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .verdict-specs{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem}
 .spec-pill{background:rgba(255,255,255,0.08);border-radius:4px;padding:0.25rem 0.75rem;font-size:0.75rem;color:rgba(255,255,255,0.7)}
 .spec-pill strong{color:var(--white);font-weight:600}
-.buy-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:0.875rem;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;margin-bottom:0.5rem}
+.buy-btn{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:0.875rem;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none}
 .buy-btn:hover{background:var(--gold2)}
 .buy-note{text-align:center;font-size:0.7rem;color:rgba(255,255,255,0.4);margin-top:0.4rem}
 .score-card{background:var(--off);border-radius:10px;padding:1.5rem;margin-bottom:2rem}
@@ -107,18 +118,6 @@ nav{background:var(--navy);height:64px;display:flex;align-items:center;justify-c
 .related-cat{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.25rem}
 .related-name{font-size:0.875rem;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:0.25rem}
 .related-price{font-size:0.875rem;font-weight:800;color:var(--navy)}
-/* Version cards */
-.version-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.25rem;margin:1.5rem 0 2.5rem}
-.version-card{border:2px solid var(--border);border-radius:12px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;display:block}
-.version-card:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(245,158,11,0.12)}
-.version-card.recommended{border-color:var(--gold);background:#fffbeb}
-.version-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem}
-.version-name{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px;color:var(--navy);margin-bottom:0.25rem}
-.version-price{font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:0.5rem}
-.version-pos{font-size:0.8rem;font-weight:600;color:var(--gold);background:var(--navy);display:inline-block;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.75rem}
-.version-desc{font-size:0.825rem;color:var(--text2);line-height:1.6;margin-bottom:1rem}
-.version-btn{display:block;background:var(--navy);color:var(--white);text-align:center;padding:0.6rem;border-radius:5px;font-size:0.8rem;font-weight:700;text-decoration:none}
-.version-card.recommended .version-btn{background:var(--gold);color:var(--navy)}
 footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
 .footer-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start}
 .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);letter-spacing:2px;margin-bottom:0.5rem}
@@ -193,43 +192,38 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
     <input type="file" accept="image/*" onchange="previewImg(this)">
   </div>
 
-  <!-- QUICK PICK SECTION -->
   <div class="article-body">
     <h2>Three Versions, One Decision</h2>
-    <p>The STX Cell VI comes in three versions built for three different types of players. Same STX Cell VI platform underneath — different coverage depending on your position and how much you need your arms protected. Pick wrong and you either have too much bulk restricting your stick work or not enough coverage leaving you exposed. Here is exactly what each version does and who it is built for.</p>
+    <p>The STX Cell VI comes in three versions built for three different types of players. Same Cell VI platform underneath — different coverage depending on your position. Pick wrong and you either have too much bulk restricting your stick work or not enough coverage leaving you exposed. Here is exactly what each version does and who it is built for.</p>
   </div>
 
   <div class="version-grid">
-    <!-- ARM GUARDS -->
-    <div class="version-card recommended">
+    <div class="version-card">
       <div class="version-badge">Most Protection</div>
       <div class="version-name">Cell VI Arm Guards</div>
       <div class="version-price">$114.99</div>
       <div class="version-pos">Attack</div>
-      <div class="version-desc">Full forearm coverage from wrist to elbow. Maximum protection for players who take the most checks and body contact. Built for attackmen who live in traffic.</div>
-      <a href="https://amzn.to/4wFsqDc" class="version-btn" target="_blank">→ Check Price on Amazon</a>
+      <div class="version-desc">Full forearm coverage from wrist to elbow. Maximum protection for players who take the most checks. Built for attackmen who live in traffic.</div>
+      <a href="https://a.co/d/04LAQbQD?tag=laxgearlab-20" class="version-btn" target="_blank">→ Check Price on Amazon</a>
     </div>
-    <!-- ARM PADS -->
-    <div class="version-card recommended" style="border-color:var(--navy);background:#f8fafc;">
-      <div class="version-badge" style="color:var(--navy)">Best All-Around</div>
+    <div class="version-card">
+      <div class="version-badge">Best All-Around</div>
       <div class="version-name">Cell VI Arm Pads</div>
       <div class="version-price">$89.99</div>
       <div class="version-pos">Midfield</div>
-      <div class="version-desc">The middle ground. Solid elbow and forearm protection without the full length of the arm guards. Perfect for middies who need protection in both phases of the game.</div>
-      <a href="https://amzn.to/4uUFDpT" class="version-btn" style="background:var(--navy);" target="_blank">→ Check Price on Amazon</a>
+      <div class="version-desc">Solid elbow and forearm protection without the full length of the arm guards. Perfect for middies who need protection in both phases of the game.</div>
+      <a href="https://a.co/d/0iWy4cn0?tag=laxgearlab-20" class="version-btn" target="_blank">→ Check Price on Amazon</a>
     </div>
-    <!-- ELBOW CAPS -->
     <div class="version-card">
       <div class="version-badge">Least Coverage</div>
       <div class="version-name">Cell VI Elbow Caps</div>
       <div class="version-price">$69.99</div>
       <div class="version-pos">Defense</div>
       <div class="version-desc">Minimal coverage focused entirely on the elbow cap. Maximum mobility for defenders who need to drive their pole and rarely take direct arm checks.</div>
-      <a href="https://amzn.to/4uNILUj" class="version-btn" target="_blank">→ Check Price on Amazon</a>
+      <a href="https://a.co/d/0df7LApD?tag=laxgearlab-20" class="version-btn" target="_blank">→ Check Price on Amazon</a>
     </div>
   </div>
 
-  <!-- VERDICT: ARM GUARDS -->
   <div class="verdict">
     <div class="verdict-top">
       <div>
@@ -242,11 +236,10 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
         <div class="verdict-price-note">on Amazon</div>
       </div>
     </div>
-    <div class="verdict-summary">The Cell VI Arm Guards are the maximum protection option in the lineup — built for attack players who take the most punishment. Full-length forearm coverage from the wrist all the way up to the elbow means every slashing check, every poke, every body contact is absorbed. If you are running the crease, driving to the cage, or playing in heavy traffic consistently, this is the version you want. The extra coverage does add some bulk but STX engineered it to stay mobile enough that your stick work does not suffer.</div>
+    <div class="verdict-summary">The Cell VI Arm Guards are the maximum protection option — built for attack players who take the most punishment. Full-length forearm coverage from the wrist all the way to the elbow means every slashing check, every poke, every body contact is absorbed. If you are running the crease, driving to the cage, or playing in heavy traffic consistently, this is the version you want. The extra coverage does add some bulk but STX engineered it to stay mobile enough that your stick work does not suffer.</div>
     <div class="verdict-specs">
       <div class="spec-pill"><strong>Coverage:</strong> Full forearm to elbow</div>
       <div class="spec-pill"><strong>Best for:</strong> Attack</div>
-      <div class="spec-pill"><strong>Price:</strong> $114.99</div>
       <div class="spec-pill"><strong>Protection:</strong> Maximum</div>
     </div>
     <div class="verdict-grid">
@@ -255,7 +248,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
         <ul class="vp-list">
           <li>Full forearm coverage — maximum protection</li>
           <li>Built for players in heavy traffic</li>
-          <li>STX Cell VI foam absorbs checks well</li>
+          <li>Cell VI foam absorbs checks well</li>
           <li>Secure fit stays in place during play</li>
           <li>Best choice for attack and crease players</li>
         </ul>
@@ -269,12 +262,11 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
         </ul>
       </div>
     </div>
-    <a href="https://amzn.to/3PH1i5X" class="buy-btn" target="_blank">→ Check Price on Amazon — Cell VI Arm Guards</a>
+    <a href="https://a.co/d/04LAQbQD?tag=laxgearlab-20" class="buy-btn" target="_blank">→ Check Price on Amazon — Cell VI Arm Guards</a>
     <div class="buy-note">Free Prime shipping · Full forearm coverage · Built for attack</div>
   </div>
 
-  <!-- VERDICT: ARM PADS -->
-  <div class="verdict" style="background:var(--navy2);">
+  <div class="verdict">
     <div class="verdict-top">
       <div>
         <div class="verdict-label">Midfield Players</div>
@@ -286,11 +278,10 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
         <div class="verdict-price-note">on Amazon</div>
       </div>
     </div>
-    <div class="verdict-summary">The Cell VI Arm Pads are the sweet spot of the lineup — the version built for players who need solid protection but do not want to be weighed down by full arm guard coverage. Middies play both ends of the field, run the most, and need gear that does not slow them down. The arm pad covers the elbow and a portion of the forearm giving you meaningful protection on checks without the full-length bulk of the arm guards. This is the most versatile version and the best choice if you are not sure which to get.</div>
+    <div class="verdict-summary">The Cell VI Arm Pads are the sweet spot of the lineup — built for players who need solid protection but do not want to be weighed down by full arm guard coverage. Middies play both ends of the field, run the most, and need gear that does not slow them down. The arm pad covers the elbow and a portion of the forearm giving you meaningful protection on checks without the full-length bulk of the arm guards. This is the most versatile version and the best choice if you are not sure which to get.</div>
     <div class="verdict-specs">
       <div class="spec-pill"><strong>Coverage:</strong> Elbow + partial forearm</div>
       <div class="spec-pill"><strong>Best for:</strong> Midfield</div>
-      <div class="spec-pill"><strong>Price:</strong> $89.99</div>
       <div class="spec-pill"><strong>Protection:</strong> Medium-High</div>
     </div>
     <div class="verdict-grid">
@@ -308,15 +299,14 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
         <div class="vp-title">Cons</div>
         <ul class="vp-list">
           <li>Less forearm coverage than arm guards</li>
-          <li>Not the right pick for pure attack crease players</li>
+          <li>Not the right pick for pure crease attackers</li>
         </ul>
       </div>
     </div>
-    <a href="https://amzn.to/4nGTw8Q" class="buy-btn" target="_blank">→ Check Price on Amazon — Cell VI Arm Pads</a>
+    <a href="https://a.co/d/0iWy4cn0?tag=laxgearlab-20" class="buy-btn" target="_blank">→ Check Price on Amazon — Cell VI Arm Pads</a>
     <div class="buy-note">Free Prime shipping · Best all-around version · Built for midfield</div>
   </div>
 
-  <!-- VERDICT: ELBOW CAPS -->
   <div class="verdict">
     <div class="verdict-top">
       <div>
@@ -333,7 +323,6 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
     <div class="verdict-specs">
       <div class="spec-pill"><strong>Coverage:</strong> Elbow cap only</div>
       <div class="spec-pill"><strong>Best for:</strong> Defense</div>
-      <div class="spec-pill"><strong>Price:</strong> $69.99</div>
       <div class="spec-pill"><strong>Protection:</strong> Minimal</div>
     </div>
     <div class="verdict-grid">
@@ -350,37 +339,27 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
         <div class="vp-title">Cons</div>
         <ul class="vp-list">
           <li>No forearm coverage — wrong for attack</li>
-          <li>Not appropriate for players in heavy contact</li>
+          <li>Not appropriate for heavy contact players</li>
         </ul>
       </div>
     </div>
-    <a href="https://amzn.to/4nyJOVG" class="buy-btn" target="_blank">→ Check Price on Amazon — Cell VI Elbow Caps</a>
+    <a href="https://a.co/d/0df7LApD?tag=laxgearlab-20" class="buy-btn" target="_blank">→ Check Price on Amazon — Cell VI Elbow Caps</a>
     <div class="buy-note">Free Prime shipping · Minimal coverage · Built for defense</div>
   </div>
 
   <div class="score-card">
-    <div class="score-title">Version Comparison Scores</div>
-    <div class="score-row"><div class="score-label">Protection</div>
-      <div class="score-bar-wrap"><div class="score-bar" style="width:95%"></div></div><div class="score-num" title="Arm Guards">9.5</div></div>
-    <div class="score-row"><div class="score-label">Mobility</div>
-      <div class="score-bar-wrap"><div class="score-bar" style="width:72%"></div></div><div class="score-num">7.2</div></div>
-    <div class="score-row"><div class="score-label">Value</div>
-      <div class="score-bar-wrap"><div class="score-bar" style="width:88%"></div></div><div class="score-num">8.8</div></div>
-    <div class="score-row"><div class="score-label">Fit & Comfort</div>
-      <div class="score-bar-wrap"><div class="score-bar" style="width:90%"></div></div><div class="score-num">9.0</div></div>
-    <div class="score-row"><div class="score-label">Durability</div>
-      <div class="score-bar-wrap"><div class="score-bar" style="width:92%"></div></div><div class="score-num">9.2</div></div>
-    <p style="font-size:0.75rem;color:var(--gray);margin-top:0.75rem;margin-bottom:0">Scores reflect the full Cell VI lineup. Protection score based on Arm Guards. Mobility score based on Elbow Caps.</p>
+    <div class="score-title">Performance Scores — Arm Guards</div>
+    <div class="score-row"><div class="score-label">Protection</div><div class="score-bar-wrap"><div class="score-bar" style="width:95%"></div></div><div class="score-num">9.5</div></div>
+    <div class="score-row"><div class="score-label">Mobility</div><div class="score-bar-wrap"><div class="score-bar" style="width:72%"></div></div><div class="score-num">7.2</div></div>
+    <div class="score-row"><div class="score-label">Value</div><div class="score-bar-wrap"><div class="score-bar" style="width:85%"></div></div><div class="score-num">8.5</div></div>
+    <div class="score-row"><div class="score-label">Fit &amp; Comfort</div><div class="score-bar-wrap"><div class="score-bar" style="width:90%"></div></div><div class="score-num">9.0</div></div>
+    <div class="score-row"><div class="score-label">Durability</div><div class="score-bar-wrap"><div class="score-bar" style="width:92%"></div></div><div class="score-num">9.2</div></div>
   </div>
 
   <div class="article-body">
 
-    <h2>What Makes the Cell VI Different</h2>
-    <p>The STX Cell VI lineup is built around a single core platform — a high-density foam construction that absorbs impact across the elbow and arm without excessive stiffness. What separates the three versions is purely coverage area, not quality. You are getting the same Cell VI protection technology across all three — the choice is how much of your arm you want covered based on your position and play style.</p>
-    <p>The fit system uses a secure wrap design that keeps the pad from sliding during play — a common complaint with cheaper elbow pads that shift during cuts and checks. All three versions stay locked in place from the first wear.</p>
-
     <h2>How To Pick The Right Version</h2>
-    <p>The simplest way to decide: think about where you take checks. Attack players absorb slashing checks directly on the forearm constantly — you need the full arm guard coverage. Defenders use their arms to deliver checks, not absorb them — the elbow cap is all you need and the extra mobility is a real advantage when driving your pole. Middies fall in between — the arm pad gives you meaningful protection without slowing you down for the defensive end.</p>
+    <p>Think about where you take checks. Attack players absorb slashing checks directly on the forearm constantly — you need the full arm guard coverage. Defenders use their arms to deliver checks, not absorb them — the elbow cap is all you need and the extra mobility is a real advantage when driving your pole. Middies fall in between — the arm pad gives you meaningful protection without slowing you down for the defensive end.</p>
     <p>If you are unsure which version fits your style of play, the arm pad at $89.99 is the safest choice. It is the most versatile version of the three and works well across every position.</p>
 
     <h2>Who Is It For?</h2>
@@ -391,8 +370,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
           <li>An attack player in heavy traffic (Arm Guards)</li>
           <li>A middie who needs balanced protection (Arm Pads)</li>
           <li>A defender who needs max mobility (Elbow Caps)</li>
-          <li>An STX gear player looking to match your kit</li>
-          <li>Someone who wants a reliable fit that stays in place</li>
+          <li>Someone who wants reliable fit that stays in place</li>
         </ul>
       </div>
       <div class="who-card no">
@@ -439,14 +417,14 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
           <td>Maximum</td>
         </tr>
         <tr>
-          <td class="highlight">Maverik M4</td>
+          <td class="highlight">Maverik M4 Arm Pad</td>
           <td>$49.99</td>
           <td>Elbow + forearm</td>
           <td>All positions</td>
           <td>Medium</td>
         </tr>
         <tr>
-          <td class="highlight">Warrior Evo Pro</td>
+          <td class="highlight">Warrior Evo Pro Arm Pad</td>
           <td>$79.99</td>
           <td>Elbow + forearm</td>
           <td>All positions</td>
@@ -456,7 +434,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
     </table>
 
     <h2>Final Verdict</h2>
-    <p>The STX Cell VI elbow pad lineup is one of the most well-thought-out offerings on the market because STX actually built three versions for three specific types of players instead of trying to make one pad work for everyone. Attack players get the arm guards, middies get the arm pads, defenders get the elbow caps — and every version delivers the same quality Cell VI protection underneath. The pricing across the three versions is fair and the fit system is one of the best in the game. Whatever your position, there is a Cell VI version built for you.</p>
+    <p>The STX Cell VI elbow pad lineup is one of the most well-thought-out offerings on the market because STX built three versions for three specific types of players instead of trying to make one pad work for everyone. Attack players get the arm guards, middies get the arm pads, defenders get the elbow caps — and every version delivers the same quality Cell VI protection underneath. Whatever your position, there is a Cell VI version built for you.</p>
 
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
@@ -465,7 +443,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
     </div>
     <div class="faq-item">
       <div class="faq-q">Can a midfielder use the Arm Guards instead of the Arm Pads?</div>
-      <div class="faq-a">Yes — if you play a physical style and prioritize protection over mobility, you can go with the arm guards. Most middies prefer the arm pads because the extra length of the arm guards can restrict movement on the defensive end, but it comes down to personal preference.</div>
+      <div class="faq-a">Yes — if you play a physical style and prioritize protection over mobility you can go with the arm guards. Most middies prefer the arm pads because the extra length can restrict movement on the defensive end, but it comes down to personal preference.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Are the STX Cell VI Elbow Caps enough for attack players?</div>
@@ -473,20 +451,20 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:2.5rem 2rem}
     </div>
     <div class="faq-item">
       <div class="faq-q">Do the STX Cell VI elbow pads run true to size?</div>
-      <div class="faq-a">The Cell VI lineup runs true to size. Measure your arm at the elbow and reference STX's size chart. If you are between sizes size up for a more comfortable fit, especially on the arm guards which wrap more of the forearm.</div>
+      <div class="faq-a">The Cell VI lineup runs true to size. Measure your arm at the elbow and reference STX's size chart. If you are between sizes, size up for a more comfortable fit.</div>
     </div>
 
     <h2>Related Reviews</h2>
     <div class="related-grid">
+      <a href="review-stx-cell-vi-shoulder-pad.html" class="related-card">
+        <div class="related-cat">Shoulder Pads</div>
+        <div class="related-name">STX Cell VI Shoulder Pad</div>
+        <div class="related-price">$129.99 – $149.99</div>
+      </a>
       <a href="review-warrior-evo-v.html" class="related-card">
         <div class="related-cat">Gloves</div>
         <div class="related-name">Warrior Evo V Gloves</div>
         <div class="related-price">$189.99</div>
-      </a>
-      <a href="review-stx-rzr-2.html" class="related-card">
-        <div class="related-cat">Gloves</div>
-        <div class="related-name">STX RZR 2 Gloves</div>
-        <div class="related-price">$89.99</div>
       </a>
       <a href="elbow-pads.html" class="related-card">
         <div class="related-cat">Buying Guide</div>
